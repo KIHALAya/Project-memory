@@ -1,0 +1,145 @@
+% ============================================================
+%  sec-4-training-pipeline.tex  —  4.4 Training Pipeline
+% ============================================================
+
+\section{Fine-Tuning Pipeline Implementation}
+\label{sec:training-pipeline}
+
+\subsection{Patched Training Entry Point}
+\label{sec:train-entry-point}
+
+The fine-tuning entry point is \filepath{train\_sft\_ascend.py},
+a modified version of the original \texttt{stage1\_sft/train.py}.
+It preserves the complete original training logic while applying
+six sequential patches at startup. The order of these patches is
+critical: \texttt{torch\_npu} must be imported before any other
+package, because it modifies PyTorch's device registry at import
+time.
+
+\tabref{patch-sequence} documents the six patches in execution order.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Ascend patch sequence in \texttt{train\_sft\_ascend.py}}
+  \label{tab:patch-sequence}
+  \begin{tabularx}{\textwidth}{lXX}
+    \toprule
+    \tableheader{Step & Action & Why} \\
+    \midrule
+    1 & \texttt{import torch\_npu;
+        transfer\_to\_npu()}
+      & Registers \texttt{"npu"} device; intercepts all
+        \texttt{.cuda()} calls globally \\
+    \rowcolor{TableRowOdd}
+    2 & Patch \texttt{mamba\_ssm.ops.selective\_scan\_interface}
+      & Replaces CUDA kernel before model is constructed \\
+    3 & Patch \texttt{MoETokenDispatcher.forward}
+      & Replaces CUDA MoE dispatch before model is constructed \\
+    \rowcolor{TableRowOdd}
+    4 & Call \texttt{\_patch\_autocast()}
+      & Replaces \texttt{torch.cuda.amp.autocast} with
+        \texttt{torch.npu.amp.autocast} \\
+    5 & Import Megatron-Bridge and Nemotron modules
+      & Safe to import after patches are in place \\
+    \rowcolor{TableRowOdd}
+    6 & Set \texttt{TORCH\_DISTRIBUTED\_DEFAULT\_BACKEND="hccl"}
+      & Ensures \texttt{init\_process\_group()} uses HCCL \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+The patches register the Ascend device, replace the Mamba and MoE kernels
+before model construction, and ensure the distributed backend and autocast
+mechanisms are compatible with the NPU hardware.
+
+\subsection{SFT Training Configuration}
+\label{sec:sft-config}
+
+The production configuration (\filepath{configs/sft\_ascend.yaml})
+targets a single Ascend 910C node with 8~NPUs, fine-tuning for
+3,400 iterations — approximately one epoch over the 137K-sample
+dataset. Key parameters include a global batch size of 32, a learning rate
+of $2.0 \times 10^{-5}$, and a tensor model parallelism size of 4 to
+optimise memory usage across the NPUs.
+
+\tabref{config-rationale} explains the rationale for key
+configuration choices.
+
+\begin{table}[htbp]
+  \centering
+  \caption{SFT configuration parameter rationale}
+  \label{tab:config-rationale}
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \tableheader{Parameter & Rationale} \\
+    \midrule
+    \texttt{tensor\_model\_parallel\_size: 4}
+      & Splits the 3,008-dimensional hidden weight matrices across 4
+        NPUs, keeping per-NPU memory below 55~GB \\
+    \rowcolor{TableRowOdd}
+    \texttt{context\_parallel\_size: 2}
+      & Splits the 4,096-token sequence across 2 NPU groups for
+        attention computation, reducing peak activation memory \\
+    \texttt{packed\_sequence: true}
+      & Uses the packed Parquet shards from SFT data prep, ensuring
+        no padding tokens are included in the loss \\
+    \rowcolor{TableRowOdd}
+    \texttt{calculate\_per\_token\_loss: true}
+      & Required for packed sequences: normalises the cross-entropy
+        loss by the number of non-masked tokens rather than by batch
+        size \\
+    \texttt{peft: null}
+      & Disables LoRA/adapter fine-tuning; full weight update
+        achieves better domain adaptation for the telecom use case \\
+    \rowcolor{TableRowOdd}
+    \texttt{finetune: true}
+      & Skips loading the pre-training optimiser state from the
+        checkpoint, allowing the fine-tuning run to begin with a
+        fresh optimiser \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Test Configuration}
+\label{sec:test-config}
+
+The test configuration (\filepath{configs/sft\_tiny.yaml}) enables
+rapid validation on a single \acrshort{npu} in approximately
+15 minutes. It substitutes a smaller Qwen3-1.8B recipe with 100 training
+iterations and a global batch size of 8, allowing for complete pipeline
+validation — including data loading and W\&B logging — without the
+parallelism complexity of the full model.
+
+\subsection{W\&B Artifact Lineage}
+\label{sec:loss-validation}
+
+The fine-tuning run produces and consumes W\&B artifacts following
+the same lineage pattern as the original pipeline. The Ascend
+run is tagged with \texttt{["sft", "ascend", "telecom"]} in the
+\texttt{patch\_wandb\_init\_for\_lineage()} call, enabling side-by-side
+comparison of CUDA and Ascend runs in the W\&B dashboard. The
+output artifact (\texttt{nano3-telecom-sft-model:latest}) is
+consumed by both the inference compilation step and the loss
+validation tool.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Artifact inputs and outputs for the Ascend SFT run}
+  \label{tab:ascend-sft-artifacts}
+  \begin{tabularx}{\textwidth}{llX}
+    \toprule
+    \tableheader{Direction & Artifact & Description} \\
+    \midrule
+    Input (model)
+      & \texttt{nano3-pretrain-model:latest}
+      & Pretrained Nemotron 3 Nano base checkpoint \\
+    \rowcolor{TableRowOdd}
+    Input (data)
+      & \texttt{nano3-sft-data-telecom:latest}
+      & Packed Parquet shards from telecom SFT data prep \\
+    Output
+      & \texttt{nano3-telecom-sft-model:latest}
+      & Fine-tuned Megatron checkpoint; saved every 200 iterations \\
+    \bottomrule
+  \end{tabularx}
+\end{table}

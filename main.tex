@@ -1,0 +1,124 @@
+% ============================================================
+%  MAIN.TEX — Central assembly file
+% ============================================================
+
+\documentclass[
+  12pt,
+  a4paper,
+  twoside,
+  openany,
+  final
+]{report}
+
+% ── 1. LOAD ALL PACKAGES & GLOBAL CONFIGURATION ─────────────
+\input{styles/packages}
+\input{styles/colors}
+\input{styles/fonts}
+\input{styles/layout}
+\input{styles/macros}
+\input{styles/listings}
+\input{styles/hyperref-setup}
+
+% ── 2. DOCUMENT METADATA ────────────────────────────────────
+\input{styles/metadata}
+
+% ── 3. BIBLIOGRAPHY DATABASE ────────────────────────────────
+\addbibresource{bibliography/references.bib}
+
+% ── 4. GLOSSARY / ACRONYMS DATABASE ─────────────────────────
+\input{backmatter/acronyms}
+\input{backmatter/glossary-entries}
+
+\makeglossaries
+
+% ── HARD-CODED EMPTY PAGE ───────────────────────────────────
+\newcommand{\blankpage}{%
+  \clearpage
+  \thispagestyle{empty}
+  \null
+  \clearpage
+}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ── FRONT MATTER ────────────────────────────────────────────
+\frontmatter
+
+\blankpage
+\input{frontmatter/dedication}
+
+\blankpage
+\input{frontmatter/acknowledgements}
+
+\blankpage
+\input{frontmatter/abstract-fr}
+
+\blankpage
+\input{frontmatter/abstract-en}
+
+\blankpage
+\tableofcontents
+
+\blankpage
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+
+\blankpage
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+
+\blankpage
+\printacronyms[title=List of Acronyms, toctitle=List of Acronyms]
+
+% ── MAIN MATTER ─────────────────────────────────────────────
+\mainmatter
+
+% ── Introduction ────────────────────────────────────────────
+\blankpage
+\input{chapters/00-introduction/chapter}
+
+
+\blankpage
+\input{chapters/01-general-context/chapter}
+
+\blankpage
+\input{chapters/02-technological-background/chapter}
+
+\blankpage
+\input{chapters/03-nemotron-case-study/chapter}
+
+\blankpage
+\input{chapters/04-migration-implementation/chapter}
+
+\blankpage
+\input{chapters/05-conclusion/conclusion}
+
+% ── APPENDICES ──────────────────────────────────────────────
+\appendix
+
+\blankpage
+\input{appendices/appendix-d-codebase}
+
+% ── BACK MATTER ─────────────────────────────────────────────
+\backmatter
+
+\glsaddall
+
+\blankpage
+\nocite{*}
+\printbibliography[
+  heading=bibintoc,
+  title={Bibliography \& References}
+]
+
+\blankpage
+\printglossary[
+  title=Glossary,
+  toctitle=Glossary
+]
+
+% ============================================================
+\end{document}
+% ============================================================

@@ -1,0 +1,152 @@
+% ============================================================
+%  styles/packages.tex
+%  Central package registry — all \usepackage declarations
+%  Organised by category with inline rationale
+% ============================================================
+
+% ── ENGINE & ENCODING ────────────────────────────────────────
+\usepackage{iftex}
+\ifLuaTeX
+  \usepackage{fontspec}           % OpenType font loading (LuaLaTeX)
+  \usepackage{luacode}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\fi
+
+% ── LANGUAGE & LOCALISATION ──────────────────────────────────
+\usepackage[
+  main=english,
+  french,
+  arabic
+]{babel}                          % Multi-language support
+\usepackage{csquotes}             % Context-sensitive quotes (required by biblatex)
+
+% ── PAGE LAYOUT ──────────────────────────────────────────────
+\usepackage[
+  a4paper,
+  top=2.5cm, bottom=2.5cm,
+  left=2.5cm, right=2.5cm,       % Symmetric margins for uniform consistency
+  headsep=1cm,
+  headheight=15pt,
+  footskip=1.5cm
+]{geometry}
+\usepackage{emptypage}            % Suppress headers on blank pages
+\usepackage{pdflscape}            % Landscape pages inside portrait doc
+\usepackage{rotating}             % Rotate floats/text
+
+% ── TYPOGRAPHY ───────────────────────────────────────────────
+\usepackage{microtype}            % Micro-typography (protrusion, expansion)
+\usepackage{setspace}             % Line spacing control
+\usepackage{ragged2e}             % Improved justification
+\usepackage{soul}                 % Underlining, striking, highlighting
+\usepackage{ulem}                 % Strikethrough etc. (normalem keeps \emph)
+\normalem
+
+% ── HEADERS & FOOTERS ────────────────────────────────────────
+\usepackage{fancyhdr}             % Custom headers and footers
+\usepackage{lastpage}             % \pageref{LastPage} for "page X of Y"
+
+% ── COLORS ───────────────────────────────────────────────────
+\usepackage[dvipsnames, svgnames, x11names, table]{xcolor}
+
+% ── MATHEMATICS ──────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}            % Extends amsmath
+\usepackage{bm}                   % Bold math symbols
+\usepackage{siunitx}              % SI units: \SI{9.8}{\meter\per\second\squared}
+
+% ── FIGURES & GRAPHICS ───────────────────────────────────────
+\usepackage{graphicx}             % \includegraphics
+\usepackage{float}                % [H] placement specifier
+\usepackage{wrapfig}              % Text-wrapped figures
+\usepackage{subcaption}           % Sub-figures and sub-tables
+\usepackage{caption}              % Custom caption formatting
+\usepackage{tikz}                 % Programmatic diagrams
+\usetikzlibrary{
+  shapes, arrows.meta, positioning,
+  calc, decorations.pathmorphing,
+  backgrounds, fit, matrix
+}
+\usepackage{pgfplots}             % Data plots
+\pgfplotsset{compat=1.18}
+\usepackage{pgf-umlsd}            % UML sequence diagrams
+\usepackage{forest}               % Tree structures
+
+% ── CUSTOM FLOAT: DIAGRAMS ───────────────────────────────────
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+  fileext=lod,
+  listname={List of Diagrams},
+  name=Diagram,
+  placement=tbhp,
+  within=chapter
+]{diagram}
+
+% ── TABLES ───────────────────────────────────────────────────
+\usepackage{booktabs}             % Professional table rules
+\usepackage{tabularx}             % Tables with auto-width columns
+\usepackage{longtable}            % Multi-page tables
+\usepackage{multirow}             % Cells spanning multiple rows
+\usepackage{makecell}             % Line breaks inside cells
+\usepackage{array}                % Extended column specifications
+\usepackage{colortbl}             % Colored table cells
+\usepackage{hhline}               % Better double hlines in tables
+
+% ── LISTS ────────────────────────────────────────────────────
+\usepackage{enumitem}             % Control over list spacing & labels
+
+% ── CODE LISTINGS ────────────────────────────────────────────
+\usepackage{listings}             % Verbatim code with highlighting
+\usepackage{minted}               % Syntax highlighting via Pygments
+                                  % Requires --shell-escape flag
+
+% ── ALGORITHMS ───────────────────────────────────────────────
+\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+
+% ── BIBLIOGRAPHY ─────────────────────────────────────────────
+\usepackage[
+  backend=biber,
+  style=ieee,                     % IEEE citation style
+  sorting=nyt,
+  maxbibnames=99,
+  giveninits=true,
+  isbn=false,
+  url=true,
+  doi=true
+]{biblatex}
+
+% ── GLOSSARY & ACRONYMS ──────────────────────────────────────
+\usepackage[
+  acronym,
+  toc,
+  nonumberlist,
+  nogroupskip,
+  automake
+]{glossaries-extra}
+
+% ── INDEX ────────────────────────────────────────────────────
+\usepackage{imakeidx}
+\makeindex[columns=2, title=Index, intoc]
+
+% ── CROSS-REFERENCES & LINKS ─────────────────────────────────
+% hyperref must be loaded LAST (with few exceptions)
+\usepackage{varioref}             % Smart page references: "on page 12"
+
+% ── MISCELLANEOUS UTILITIES ──────────────────────────────────
+\usepackage{lipsum}               % Placeholder text (remove in production)
+\usepackage{comment}              % Multi-line comment blocks
+\usepackage{pdfpages}             % Insert external PDF pages
+\usepackage{epigraph}             % Chapter epigraphs/quotes
+\usepackage{tcolorbox}            % Colored info/warning boxes
+\tcbuselibrary{skins, breakable, theorems, listings}
+\usepackage{mdframed}             % Framed environments
+\usepackage{todonotes}            % \todo{} margin notes (disable in final)
+\usepackage{xspace}               % Intelligent spacing after macros
+\usepackage{etoolbox}             % Toolbox for LaTeX programmers
+\usepackage{xparse}               % Advanced command definitions
+\usepackage{calc}                 % Arithmetic in length expressions
+\usepackage{eso-pic}              % Absolute positioning on pages (cover)
+\usepackage{tikzpagenodes}        % TikZ page node access
+\usepackage{qrcode}               % QR codes: \qrcode{https://...}
+\usepackage{fontawesome5}          % Icons: \faExclamationTriangle etc.

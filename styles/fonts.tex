@@ -1,0 +1,25 @@
+% ============================================================
+%  styles/fonts.tex — version universelle (LuaLaTeX + pdfLaTeX)
+% ============================================================
+
+\ifLuaTeX
+  \usepackage{fontspec}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Consolas}[Scale=0.9] % Consolas supports box drawing characters better
+  \babelfont[arabic]{rm}[Renderer=HarfBuzz]{Arial} % Improved Arabic rendering
+  \babelfont[arabic]{sf}[Renderer=HarfBuzz]{Arial}
+  \babelfont[arabic]{tt}[Renderer=HarfBuzz]{Arial}
+\else
+  \usepackage{lmodern}
+\fi
+
+% \HeadingFont — défini une seule fois, compatible les deux moteurs
+\newcommand{\HeadingFont}{\sffamily}
+
+% ── INTERLIGNE ───────────────────────────────────────────────
+\setstretch{1.25}
+
+% ── PARAGRAPHES ──────────────────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}

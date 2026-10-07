@@ -1,0 +1,97 @@
+% ============================================================
+%  sec-1-overview.tex  —  3.1 Nemotron 3 Nano Overview
+% ============================================================
+
+\section{Nemotron 3 Nano Overview}
+\label{sec:nemotron-overview}
+
+Nemotron 3 Nano is an open, efficient large language model developed by
+NVIDIA and released in 2025. It belongs to the Nemotron 3 model family —
+a suite of models spanning multiple capability tiers — and is positioned
+as a high-efficiency alternative to models with significantly larger active
+parameter counts. According to the repository root \texttt{README.md},
+Nemotron 3 Nano \textit{``achieves better or on-par accuracy than competitive
+models while having up to 3.3$\times$ higher inference throughput''} compared
+to models such as GPT-OSS-20B and Qwen3-30B-A3B.
+
+The model is designed for \textbf{agentic reasoning} workloads: multi-step,
+multi-turn tasks requiring tool invocation, long-context comprehension, and
+structured output generation. Its primary use cases, as documented in the
+repository, include agentic pipelines with tool calling, extended context
+document analysis (up to 1M tokens), multilingual tasks across 15+ languages,
+and reasoning tasks with on/off reasoning-mode control.
+
+% ── 3.1.1 ────────────────────────────────────────────────────
+\subsection{Architecture}
+\label{subsec:nemotron-architecture}
+
+Nemotron 3 Nano implements a \term{Hybrid Mamba-Transformer} architecture
+combined with a \term{sparse Mixture-of-Experts} (\acrshort{moe}) design.
+This constitutes a departure from dense transformer-only architectures:
+the hybrid design interleaves Mamba state-space model layers with standard
+transformer attention layers, enabling efficient long-sequence processing
+without the quadratic complexity of full self-attention across all layers.
+
+The sparse \acrshort{moe} component activates only a subset of expert
+networks per token during each forward pass, decoupling total parameter
+count from per-token compute cost. \tabref{nemotron-arch-specs} documents
+the architectural parameters extracted from the repository
+\texttt{README.md}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Nemotron 3 Nano architectural specifications}
+  \label{tab:nemotron-arch-specs}
+  \begin{tabularx}{0.88\textwidth}{lX}
+    \toprule
+    \tableheader{Parameter & Value} \\
+    \midrule
+    Total parameters         & 31.6B \\
+    \rowcolor{TableRowOdd}
+    Active parameters        & 3.6B (per forward pass) \\
+    Architecture type        & Hybrid Mamba-Transformer with sparse MoE \\
+    \rowcolor{TableRowOdd}
+    Number of layers         & 32 \\
+    Model dimension          & 3,008 \\
+    \rowcolor{TableRowOdd}
+    Total routable experts   & 128 \\
+    Activated experts        & 6 per token per MoE layer \\
+    \rowcolor{TableRowOdd}
+    Shared experts           & 2 \\
+    Pretraining tokens       & 25 trillion \\
+    \rowcolor{TableRowOdd}
+    Context length           & Up to 1M tokens \\
+    Training stages          & 3 (Pretrain $\to$ SFT $\to$ RL) \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+The 31.6B/3.6B parameter ratio means that each forward pass activates
+approximately 11.4\% of the total parameters. This is the efficiency
+mechanism that enables inference throughput 3.3$\times$ higher than dense
+models of similar capability.
+
+% ── 3.1.2 ────────────────────────────────────────────────────
+\subsection{Model Capabilities}
+\label{subsec:nemotron-capabilities}
+
+The following capabilities are documented in the repository
+\texttt{README.md} and constitute the target requirements for the full
+training pipeline described in subsequent sections.
+
+% ── 3.1.3 ────────────────────────────────────────────────────
+\subsection{Model Family Positioning}
+\label{subsec:model-family}
+
+The Nemotron 3 family, as referenced in the repository, comprises three
+tiers: \textbf{Nano} (31.6B total / 3.6B active, optimised for throughput
+and edge/cloud inference), \textbf{Super} (mid-tier capability/cost
+balance), and \textbf{Ultra} (maximum capability, targeting frontier
+benchmark performance). Nano's design rationale is explicit in the
+repository: it trades total parameter count for inference efficiency by
+exploiting sparse expert activation, making it deployable on hardware
+configurations that cannot sustain dense models of equivalent benchmark
+performance. The training pipeline — documented across four stage
+directories — is shared in architecture across the family, with
+stage-specific configurations controlling model dimension and parallelism
+settings per tier.

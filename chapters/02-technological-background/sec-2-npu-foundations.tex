@@ -1,0 +1,107 @@
+% ============================================================
+%  sec-2-npu-foundations.tex  —  2.2 NPU Computing Foundations
+% ============================================================
+
+\section{NPU Computing Foundations}
+\label{sec:npu-foundations}
+
+
+% ── 2.2.1 ────────────────────────────────────────────────────
+\subsection{NPU Architecture Principles}
+\label{subsec:npu-arch}
+
+
+The most prevalent NPU computational substrate is the \textit{systolic array}:
+a 2D grid of Processing Elements (PEs) arranged so that data flows
+rhythmically through the array like a heartbeat, with each element
+performing a MAC operation as data passes through. In a typical
+$N \times N$ configuration:
+
+\begin{itemize}
+  \item Input activations stream west-to-east across rows.
+  \item Weight matrices are pre-loaded north-to-south down columns.
+  \item Partial sums accumulate southward and are written out at the bottom edge.
+\end{itemize}
+
+The key advantage is that each data element is read once from memory and
+reused across many computations as it flows through the grid, dramatically
+reducing memory bandwidth requirements relative to a GPU's scratchpad model.
+
+NPU memory design is governed by the principle that physical distance from
+compute correlates directly with energy cost, with the four-level hierarchy
+summarised in \tabref{npu-memory}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{NPU on-chip memory hierarchy and access costs}
+  \label{tab:npu-memory}
+  \begin{tabularx}{\textwidth}{lllXX}
+    \toprule
+    \tableheader{Level & Type & Size & Access Cost & Purpose} \\
+    \midrule
+    PE Register File & Register & Bytes  & 1$\times$ (baseline) & Immediate MAC operands \\
+    \rowcolor{TableRowOdd}
+    PE Local Scratchpad & SRAM   & KB     & $\sim$2$\times$      & Local PE data \\
+    Global Buffer    & SRAM   & 16–24 MB & $\sim$20$\times$     & Active weights and activations \\
+    \rowcolor{TableRowOdd}
+    Off-chip Memory  & HBM/DRAM & GB    & 200–1,000$\times$   & Full model weights \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+
+% ── 2.2.3 ────────────────────────────────────────────────────
+\subsection{Specialised Execution Hardware}
+\label{subsec:npu-hw}
+
+A typical NPU execution pipeline consists of three specialised units
+working in concert. The \textbf{Matrix Engine} (or MAC Array, MAA) is a
+systolic array implementing the core GEMM operation, often fused with a
+bias accumulator. The \textbf{Vector Engine} handles element-wise
+operations: ReLU, sigmoid, tanh, layer normalisation. The \textbf{Dispatching
+Unit} (DSU) routes non-zero input feature maps to the MAA, enabling
+zero-skipping to accelerate sparse computations.
+
+NPUs exploit \textit{operator fusion} to eliminate intermediate memory
+round-trips. A Conv+Bias+ReLU sequence, for instance, executes as a single
+hardware pass — saving two global memory write-reads compared to three
+separate kernel launches as required on a GPU. For transformer models,
+the entire multi-head attention block (Q$\times$K, Softmax, $\times$V) can
+be fused into a single dispatched operation.
+
+
+% ── 2.2.5 ────────────────────────────────────────────────────
+\subsection{NPU Performance Metrics}
+\label{subsec:npu-metrics}
+
+\acrfull{tops} is the primary throughput metric for NPU compute capacity.
+The Huawei Ascend 910 achieves approximately 256 TFLOPS (FP16) and 512 TOPS
+in INT8 mode. \tabref{perf-metrics} provides a quantitative comparison of
+inference performance across processor types.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Inference performance comparison: CPU, GPU, NPU}
+  \label{tab:perf-metrics}
+  \begin{tabularx}{\textwidth}{lXXX}
+    \toprule
+    \tableheader{Metric & CPU & GPU & NPU} \\
+    \midrule
+    Peak TOPS (INT8) & $<$0.001 & 30–624 & 256–512 \\
+    \rowcolor{TableRowOdd}
+    FP16 TFLOPS     & $<$0.1   & 100–989 & 256 \\
+    Latency (ResNet-50) & 50–100 ms & 5–10 ms & 1–3 ms \\
+    \rowcolor{TableRowOdd}
+    Throughput (img/s) & 10–20 & 100–300 & 300–600 \\
+    Energy efficiency & 1–5 GFLOPS/W & 10–30 GFLOPS/W & 38–60 TOPS/W \\
+    \rowcolor{TableRowOdd}
+    Memory bandwidth & 50–100 GB/s & 200–3,350 GB/s & 1,228 GB/s (Ascend 910) \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Experimental benchmarks (KAIST) show that an NPU delivers 60\% faster
+inference than a comparable GPU while consuming 44\% less power for
+medium-complexity models. At high utilisation (MobileNetV2: 99.9\%), NPUs
+achieve 143$\times$ better energy efficiency than CPU equivalents, with
+only 0.15–0.7\% accuracy loss under INT8 quantisation.

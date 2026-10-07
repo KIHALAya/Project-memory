@@ -1,0 +1,232 @@
+% ============================================================
+%  chapters/05-conclusion/conclusion.tex
+%  Conclusion
+% ============================================================
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+\markboth{Conclusion}{Conclusion}
+
+% ── Recall of context ────────────────────────────────────────
+This report was carried out within \CompanyName{} during the period
+\InternshipPeriod{} as part of the final-year engineering programme
+at \FacultyName{}. The work addressed a concrete industrial challenge
+facing organisations that operate or plan to operate AI infrastructure:
+the near-total dependency of modern large language model pipelines on
+NVIDIA's proprietary CUDA ecosystem, and the technical feasibility of
+transitioning those pipelines to Huawei's Ascend CANN ecosystem as a
+sovereign, energy-efficient alternative.
+
+% ── Summary of contributions ─────────────────────────────────
+\section*{Summary of Contributions}
+\addcontentsline{toc}{section}{Summary of Contributions}
+
+The work unfolded across four structured chapters, each building
+on the previous to form a coherent end-to-end study.
+
+\textbf{Chapter~1} established the general context of the project:
+the organisational context of \CompanyName{} and its position within
+the Huawei group, the technical context of the AI hardware landscape,
+and the strategic motivations — supply chain resilience, energy
+efficiency, and sovereignty — that make GPU-to-NPU migration a
+relevant and pressing challenge for enterprises operating in the
+MENA region.
+
+\textbf{Chapter~2} provided the technological foundations necessary
+to understand the migration problem at a systems level. The chapter
+covered GPU computing foundations — the CUDA execution model,
+the SIMT architecture, and the CUDA software ecosystem — followed
+by NPU architecture principles and the DaVinci compute model, and
+concluded with a detailed analysis of the Huawei Ascend stack:
+the DaVinci core architecture, the CANN runtime and compiler,
+the MindSpore framework, and the complete AI software and
+infrastructure landscape spanning both the NVIDIA and Huawei
+ecosystems.
+
+\textbf{Chapter~3} conducted a technical reverse-engineering study
+of the Nemotron 3 Nano pipeline as a concrete, production-grade
+case study of an NVIDIA-native AI lifecycle. The chapter
+reconstructed the complete training pipeline from the repository
+— data preparation, pretraining, supervised fine-tuning,
+reinforcement learning, evaluation, and inference — and produced
+a component-level technical stack analysis identifying every
+CUDA dependency, its position in the pipeline, and its functional
+role. This analysis established the precise scope of the migration
+challenge: a vertically integrated CUDA stack with two
+architecture-specific custom operators, a complex distributed
+training framework, and a tight coupling between the training
+and inference stages through shared model formats and serving
+infrastructure.
+
+\textbf{Chapter~4} translated the findings of Chapter~3 into a
+structured, actionable migration plan. The plan addressed the
+complete scope of the migration — from hardware provisioning
+through operator implementation, framework porting, and inference
+deployment — organised into four sequential phases with explicit
+acceptance gates. Two implementation tracks were defined to
+separate correctness validation from performance optimisation.
+A component-level change impact assessment identified which
+files require no changes, which require targeted modifications,
+and which represent genuine engineering work. A risk register
+and validation framework completed the plan, providing the
+operational structure needed to execute the migration as a
+managed infrastructure project.
+
+% ── Key findings ─────────────────────────────────────────────
+\section*{Key Findings}
+\addcontentsline{toc}{section}{Key Findings}
+
+Several conclusions of broader relevance emerged from this study.
+
+\textbf{The migration complexity is not uniform.} A common
+assumption about GPU-to-NPU migration is that it requires
+rewriting an AI pipeline from scratch. This study demonstrates
+that the reality is more nuanced: a substantial portion of a
+production AI pipeline — the data preparation infrastructure,
+the experiment tracking layer, the orchestration system,
+and the distributed communication primitives — is entirely
+hardware-agnostic and requires no changes whatsoever. The
+migration complexity concentrates at a small number of specific
+layers: the compute runtime, the training framework's
+device integration, and, critically, any custom hardware
+kernels specific to the model architecture.
+
+\textbf{Architecture-specific operators are the critical path.}
+For Nemotron 3 Nano, the two custom CUDA operators required
+by the Mamba SSM and MoE components represent the highest-risk,
+highest-effort items in the entire migration — more so than
+framework porting or infrastructure reconfiguration. This
+finding generalises: any model that relies on custom hardware
+kernels beyond the standard set of neural network primitives
+will face a per-operator implementation bottleneck on any
+non-CUDA platform, regardless of how mature the broader
+ecosystem is.
+
+\textbf{The PyTorch-NPU compatibility layer substantially reduces
+migration friction.} Huawei's \texttt{torch\_npu} package, which
+registers Ascend NPUs as a native PyTorch device type, means that
+the majority of PyTorch-based training code can run on Ascend
+with targeted rather than wholesale changes. This significantly
+lowers the initial barrier to entry and enables a correctness
+validation baseline to be established quickly before committing
+to a deeper MindSpore-native reimplementation.
+
+\textbf{The energy efficiency advantage is material at scale.}
+The Ascend 910C's performance-per-watt advantage over the H100
+— 2.00 versus 1.41 TFLOPS/W — translates into a 42\% reduction
+in energy consumption for equivalent compute work. At the scale
+of a data centre running thousands of training hours per month,
+this efficiency gain represents a substantial and persistent
+reduction in operating expenditure that compounds over the
+infrastructure lifetime, partially or fully offsetting the
+one-time migration investment.
+
+\textbf{Ecosystem maturity remains the primary adoption barrier.}
+Despite the hardware performance and efficiency advantages of
+Ascend 910C, the CANN ecosystem's maturity gap relative to CUDA
+— in terms of operator coverage, developer tooling, community
+resources, and production-validated framework integrations —
+represents the largest practical barrier to adoption. Projects
+that rely exclusively on standard transformer architectures are
+substantially better positioned for migration than those that
+use novel architectural primitives, as was the case with
+Nemotron 3 Nano's Mamba SSM layers.
+
+% ── Limitations ──────────────────────────────────────────────
+\section*{Limitations}
+\addcontentsline{toc}{section}{Limitations}
+
+Several limitations of this study should be acknowledged.
+
+The migration plan presented in Chapter~4 is a design and
+planning artefact: the full implementation, numerical validation,
+and performance benchmarking of the migrated pipeline on physical
+Ascend 910C hardware falls outside the scope of this report.
+The performance estimates in Chapter~4 are derived from hardware
+specifications and published benchmarks rather than from
+empirical measurements on the target workload. Actual throughput
+and latency figures may differ, particularly for the
+architecture-specific Mamba SSM and MoE operations whose
+performance under TBE implementation is inherently speculative
+at this stage.
+
+Furthermore, the study focuses on a single model architecture
+— Nemotron 3 Nano — as the case study. While the migration
+methodology is designed to be generalisable, the specific
+operator coverage gaps, the parallelism configuration
+adjustments, and the checkpoint conversion requirements are
+architecture-dependent and would need to be reassessed for
+a different model family.
+
+Finally, the vLLM-Ascend fork used as the generation backend
+for the RL stage is a community-maintained project whose
+production readiness for MoE architectures and long-context
+configurations was not empirically validated within this work.
+Its suitability for the full Nemotron 3 Nano production
+deployment remains to be confirmed through practical testing.
+
+% ── Future work ──────────────────────────────────────────────
+\section*{Perspectives and Future Work}
+\addcontentsline{toc}{section}{Perspectives and Future Work}
+
+Several directions for future work emerge naturally from this
+study.
+
+\textbf{Empirical validation and benchmarking.} The most
+immediate next step is the execution of the migration plan:
+implementing the custom TBE operators, patching the training
+scripts, and running the validation gate sequence on physical
+Ascend 910C hardware. This would produce empirical training
+throughput, inference latency, and benchmark accuracy figures
+that could confirm or revise the estimates presented in
+Chapter~4, and would constitute a complete proof of concept
+for the migration approach.
+
+\textbf{TBE operator optimisation.} The TBE implementations
+of the Mamba SSM selective scan and MoE token dispatch operators
+represent significant optimisation opportunities. Initial
+implementations using straightforward approaches are likely
+to leave substantial performance on the table relative to what
+is achievable with careful tiling, pipelining, and DaVinci
+Cube/Vector unit co-scheduling. A dedicated operator
+engineering effort focusing on these two primitives could
+significantly close the throughput gap between Ascend and H100.
+
+\textbf{Generalisation to a migration intelligence platform.}
+The methodology developed in this report — systematic
+dependency analysis, operator coverage mapping, phased migration
+planning, and gate-based validation — could be formalised into
+a reusable migration intelligence tool. Such a tool would
+accept a model architecture and a target hardware platform
+as inputs, automatically identify coverage gaps, generate a
+migration effort estimate, and suggest an optimal migration
+track. This was the original framing of the project and
+represents a high-value direction for continued development
+at \CompanyName{}.
+
+\textbf{Broader hardware target coverage.} The methodology
+applied in this report to the CUDA-to-CANN migration is
+applicable to other hardware transitions: AMD ROCm, Intel
+oneAPI, and custom ASIC accelerators. Extending the analysis
+to cover these platforms would produce a comprehensive
+multi-vendor migration framework relevant to any organisation
+seeking to diversify its AI hardware dependency beyond the
+current NVIDIA-dominated market.
+
+\textbf{Agentic and long-context deployment on Ascend.}
+Nemotron 3 Nano's 1M-token context capability and its
+agentic tool-calling features represent deployment scenarios
+that place particularly demanding requirements on the
+inference stack. Validating the complete MindIE inference
+pipeline at 1M-token context and under multi-turn agentic
+workloads — with accurate measurement of latency, throughput,
+and KV-cache efficiency — would provide a definitive assessment
+of Ascend's readiness for the most demanding LLM deployment
+patterns.
+
+\vspace{1.5cm}
+
+\begin{flushright}
+  \textit{\AuthorFullName}\\
+  \ReportDate{}~—~\ReportLocation
+\end{flushright}

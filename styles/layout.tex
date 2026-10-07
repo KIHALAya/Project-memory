@@ -1,0 +1,151 @@
+% ============================================================
+%  styles/layout.tex
+%  Page geometry, chapter/section styling, headers & footers
+% ============================================================
+
+% ── CHAPTER STYLE (titlesec) ─────────────────────────────────
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+% Chapter title format — full-width colored bar
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{ChapterColor}\HeadingFont}  % format
+  {%
+    \vspace{-20pt}%
+    \colorbox{ChapterColor}{%
+      \parbox[c][1.8cm][c]{\textwidth}{%
+        \centering\color{white}\fontsize{14}{16}\selectfont
+        \MakeUppercase{\chaptertitlename}\hspace{10pt}%
+        \fontsize{40}{44}\selectfont\thechapter
+      }%
+    }%
+  }
+  {0pt}                          % separation between label and title
+  {\vspace{10pt}\raggedright}    % before-code
+  [\vspace{8pt}\textcolor{AccentGold}{\hrule height 2pt}\vspace{12pt}]
+
+% Section format
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{SectionColor}\HeadingFont}
+  {\thesection}{1em}{}
+  [\vspace{-4pt}\textcolor{SectionColor!40}{\hrule height 0.5pt}]
+
+% Subsection format
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{SectionColor!80}\HeadingFont}
+  {\thesubsection}{1em}{}
+
+% Subsubsection format
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\itshape\color{DarkGray}\HeadingFont}
+  {\thesubsubsection}{1em}{}
+
+% Spacing around headings
+\titlespacing*{\chapter}     {0pt}{0pt}{30pt}
+\titlespacing*{\section}     {0pt}{18pt}{8pt}
+\titlespacing*{\subsection}  {0pt}{14pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{12pt}{4pt}
+
+% ── CAPTION STYLE ────────────────────────────────────────────
+\captionsetup{
+  font       = {small, it},
+  labelfont  = {bf, color=PrimaryBlue},
+  labelsep   = period,
+  justification = centering,
+  skip       = 8pt
+}
+\captionsetup[table]{
+  position   = above,
+  skip       = 4pt
+}
+
+% ── HEADER & FOOTER (fancyhdr) ───────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}  % clear all
+
+% Two-sided layout:
+%   Even pages  (left)  → chapter name on outer, page on inner
+%   Odd  pages  (right) → section name on inner, page on outer
+\fancyhead[LE]{%
+  \small\color{MidGray}\textit{\nouppercase{\leftmark}}%
+}
+\fancyhead[RO]{%
+  \small\color{MidGray}\textit{\nouppercase{\rightmark}}%
+}
+\fancyfoot[LE,RO]{%
+  \small\color{MidGray}\thepage\ /\ \pageref{LastPage}%
+}
+\fancyfoot[LO,RE]{%
+  \small\color{MidGray}\textit{\ReportTitleShort}%
+}
+
+% Header/footer rules
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrule}{%
+  {\color{PrimaryBlue}\hrule width\headwidth height\headrulewidth}%
+}
+\renewcommand{\footrule}{%
+  {\color{AccentGold}\hrule width\headwidth height\footrulewidth}%
+}
+
+% Plain style for chapter opening pages
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\small\color{MidGray}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \renewcommand{\footrule}{%
+    {\color{AccentGold}\hrule width\headwidth height\footrulewidth}%
+  }
+}
+
+% Cover page style — completely empty
+\fancypagestyle{cover}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ── LIST STYLES ──────────────────────────────────────────────
+\setlist{
+  topsep    = 4pt,
+  itemsep   = 2pt,
+  parsep    = 0pt,
+  leftmargin= 1.5em
+}
+\setlist[itemize,1]{label=\textcolor{PrimaryBlue}{\textbullet}}
+\setlist[itemize,2]{label=\textcolor{SecondaryBlue}{\textendash}}
+\setlist[enumerate,1]{label=\textcolor{PrimaryBlue}{\arabic*.}}
+
+% ── FLOAT SETTINGS ───────────────────────────────────────────
+\setcounter{topnumber}    {3}
+\setcounter{bottomnumber} {2}
+\setcounter{totalnumber}  {5}
+\renewcommand{\topfraction}    {0.85}
+\renewcommand{\bottomfraction} {0.60}
+\renewcommand{\textfraction}   {0.10}
+\renewcommand{\floatpagefraction}{0.75}
+
+% ── DEPTH SETTINGS ───────────────────────────────────────────
+\setcounter{tocdepth}    {3}   % TOC shows up to subsubsection
+\setcounter{secnumdepth} {3}   % Numbering up to subsubsection
+
+% ── DOCUMENT MATTERS (for report class) ──────────────────────
+\newcommand{\frontmatter}{%
+  \cleardoublepage
+  \pagenumbering{roman}
+  \assignpagestyle{\chapter}{empty}
+}
+
+\newcommand{\mainmatter}{%
+  \cleardoublepage
+  \pagenumbering{arabic}
+  \assignpagestyle{\chapter}{plain}
+  \raggedbottom
+  \emergencystretch 3em
+}
+
+\newcommand{\backmatter}{%
+  \cleardoublepage
+}

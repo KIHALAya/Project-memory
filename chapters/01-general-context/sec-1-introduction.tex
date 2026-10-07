@@ -1,0 +1,44 @@
+% ============================================================
+%  sec-1-introduction.tex  —  1.1 Introduction
+% ============================================================
+
+\section{Introduction}
+\label{sec:introduction}
+
+The rapid evolution of artificial intelligence has driven an unprecedented
+increase in the complexity and scale of machine learning models \cite{brown2020gpt3}. Modern
+applications — particularly large language models and multimodal systems —
+demand significant computational resources \cite{kaplan2020scaling}, historically supplied by
+NVIDIA's \acrshort{cuda}-based \acrshort{gpu} infrastructures. However,
+the current AI hardware landscape is undergoing a structural transformation,
+with specialised accelerators such as Neural Processing Units (\acrshort{npu}s)
+emerging as viable alternatives optimised for efficiency, energy consumption,
+and scalability \cite{iea2024electricity}.
+
+This transition introduces substantial technical challenges: differences in
+execution models, framework compatibility, model conversion processes, and
+optimisation strategies make it increasingly difficult for organisations to
+determine whether a given AI workload can be efficiently migrated — and at
+what performance or cost implication.
+
+This project addresses the problem by proposing an \term{intelligent
+decision-support system} that analyses AI workloads and evaluates their
+feasibility for migration across heterogeneous hardware environments.
+Specifically, the system focuses on the transition from \acrshort{cuda}-based
+\acrshort{gpu} environments to Huawei's Ascend \acrshort{npu} ecosystem,
+providing structured insights into model compatibility, expected performance
+variation, and infrastructure suitability.
+
+The proposed platform introduces a modular architecture separating workload
+analysis, hardware abstraction, migration evaluation, and recommendation
+generation. Rather than relying solely on traditional benchmarking, the system
+integrates benchmarking as a validation mechanism within a broader migration
+intelligence framework, enabling decision support that goes beyond performance
+measurement toward informed deployment choices.
+
+The work is carried out within \CompanyName, leveraging the company's expertise
+in AI infrastructure, cloud computing, and hardware acceleration technologies \cite{huawei2025annual}.
+Huawei's Ascend ecosystem — together with its software stack including
+\acrshort{cann} and MindSpore — provides the industrial foundation for
+exploring alternative AI execution environments and future-oriented deployment
+strategies.

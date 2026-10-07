@@ -1,0 +1,81 @@
+% ============================================================
+%  styles/metadata.tex
+%  Single source of truth for all document metadata.
+%  Edit here — values propagate everywhere automatically.
+% ============================================================
+
+% ── INSTITUTION ──────────────────────────────────────────────
+\newcommand{\UniversityName}{Hassan II University}
+\newcommand{\FacultyName}{Faculty of Sciences and Technology Mohammedia}
+\newcommand{\DepartmentName}{Department of Mathematics}
+\newcommand{\ProgramName}{Engineering Degree — Data \& Computer Science}
+
+% ── MINISTRY ─────────────────────────────────────────────────
+\newcommand{\MinistryName}{%
+  Ministry of Higher Education, \\
+  Scientific Research and Innovation
+}
+\newcommand{\MinistryNameShort}{MESRI}
+
+% ── HOST COMPANY (for internship reports) ────────────────────
+\newcommand{\CompanyName}{Huawei Morocco}
+\newcommand{\CompanyDivision}{Technologies Co. Ltd.}
+\newcommand{\CompanyCity}{Casablanca, Morocco}
+\newcommand{\InternshipPeriod}{April 1 -- July 31, 2026}
+
+% ── REPORT DETAILS ───────────────────────────────────────────
+\newcommand{\ReportTitle}{%
+  Cross-Hardware AI Benchmarking\\
+  and Deployment Optimization Across\\
+  Huawei Ascend and NVIDIA CUDA Ecosystems
+}
+\newcommand{\ReportTitleShort}{AI Cross-Hardware Benchmarking}
+\newcommand{\ReportSubtitle}{%
+  End-of-Year Internship Project\\[4pt]
+  \textit{In partial fulfilment of the requirements for the\\
+  Engineering Diploma in Data \& Computer Science}
+}
+\newcommand{\ReportType}{End-of-Year Project (PFA)}
+\newcommand{\AcademicYear}{2025 -- 2026}
+\newcommand{\ReportDate}{June 2026}
+\newcommand{\ReportLocation}{Casablanca, Morocco}
+
+% ── AUTHOR ───────────────────────────────────────────────────
+\newcommand{\AuthorFirstName}{Aya}
+\newcommand{\AuthorLastName}{KIHAL}
+\newcommand{\AuthorFullName}{\AuthorFirstName{} \AuthorLastName}
+\newcommand{\AuthorEmail}{kihalaya00@gmail.com}
+\newcommand{\StudentID}{20210512}
+
+% ── SUPERVISORS ──────────────────────────────────────────────
+\newcommand{\AcademicSupervisorName}{Pr. Karam ALLALI}
+\newcommand{\AcademicSupervisorTitle}{Professor, Head of Department of Mathematics}
+\newcommand{\AcademicSupervisorInst}{\FacultyName}
+
+\newcommand{\IndustrialSupervisorName}{Mr. Zhang ZHEQIAN}
+\newcommand{\IndustrialSupervisorTitle}{Data Center Solutions Department Director}
+\newcommand{\IndustrialSupervisorInst}{\CompanyName}
+
+% ── JURY MEMBERS (for thesis/defense) ────────────────────────
+\newcommand{\DefenseDate}{June 18, 2026}
+
+\newcommand{\JuryPresidentName}{Pr.K.ALLALI}
+\newcommand{\JuryPresidentRole}{}
+\newcommand{\JuryMemberOneName}{Pr.N.MOUSSAID}
+\newcommand{\JuryMemberOneRole}{}
+% Add a second examiner placeholder for layout consistency if needed
+\newcommand{\JuryMemberTwoName}{} 
+\newcommand{\JuryMemberTwoRole}{}
+
+% ── LOGO PATHS ───────────────────────────────────────────────
+\newcommand{\LogoUniversity}{images/logos/fstm-logo}
+\newcommand{\LogoMinistry}{images/logos/logo-ministry}
+\newcommand{\LogoCompany}{images/logos/Huawei-logo}
+
+\newcommand{\LogoFaculty}{images/logos/logo-faculty}
+
+% ── PDF METADATA (used by hyperref-setup.tex) ────────────────
+\newcommand{\PDFTitle}{\ReportTitleShort}
+\newcommand{\PDFAuthor}{\AuthorFullName}
+\newcommand{\PDFSubject}{\ReportType\ -- \AcademicYear}
+\newcommand{\PDFKeywords}{AI benchmarking, cross-hardware deployment, pipeline migration, Huawei Ascend, NVIDIA CUDA, GPU computing, NPU acceleration, CPU inference, heterogeneous computing, hardware abstraction layer, machine learning systems, large language models, model evaluation, performance benchmarking, latency measurement, throughput analysis, cost-performance optimization, model inference optimization, MLOps, model deployment pipeline, containerization, Docker, Kubernetes, cloud computing, edge AI, distributed systems, microservices architecture, workflow orchestration, FastAPI, AI infrastructure optimization, workload profiling, experimental evaluation, model selection system, intelligent recommendation engine, CANN, MindSpore, ModelArts, Huawei AI ecosystem}

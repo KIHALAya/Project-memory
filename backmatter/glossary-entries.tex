@@ -1,0 +1,156 @@
+% ============================================================
+%  backmatter/glossary-entries.tex
+%  Complete glossary — all chapters including Chapter 4
+% ============================================================
+
+% ── CHAPTER 2 — GPU / NPU ARCHITECTURE ──────────────────────
+
+\newglossaryentry{microservice}{
+  name        = {microservice},
+  plural      = {microservices},
+  description = {An independently deployable software service focused on a single business capability, communicating via APIs.}
+}
+
+\newglossaryentry{warp}{
+  name        = {warp},
+  description = {A group of 32 threads in CUDA executing instructions in lock-step. The smallest unit of scheduling on an SM.}
+}
+
+\newglossaryentry{systolicarray}{
+  name        = {systolic array},
+  description = {A 2D grid of processing elements where data flows rhythmically, performing MAC operations at each step.}
+}
+
+\newglossaryentry{operatorfusion}{
+  name        = {operator fusion},
+  description = {A compiler optimization merging multiple neural network operations into one pass to reduce memory access.}
+}
+
+\newglossaryentry{memorycoalescing}{
+  name        = {memory coalescing},
+  description = {A memory access pattern where consecutive threads access consecutive addresses, merging transactions into one.}
+}
+
+\newglossaryentry{kernelfunction}{
+  name        = {kernel function},
+  description = {A function executed in parallel on a device by many threads, launched from host code.}
+}
+
+\newglossaryentry{davincicore}{
+  name        = {DaVinci core},
+  description = {The fundamental unit of Huawei Ascend NPUs, featuring specialized Cube, Vector, and Scalar units.}
+}
+
+\newglossaryentry{gls-hccs}{
+  name        = {HCCS},
+  description = {Huawei Cache Coherence System — high-speed chip-to-chip interconnect for Ascend NPU servers.}
+}
+
+% ── CHAPTER 3 — NEMOTRON PIPELINE ───────────────────────────
+
+\newglossaryentry{megatronbridge}{
+  name        = {Megatron-Bridge},
+  description = {NVIDIA distributed training framework that wraps Megatron-LM with unified configuration and entry points.}
+}
+
+\newglossaryentry{nemorl}{
+  name        = {NeMo-RL},
+  description = {NVIDIA reinforcement learning framework for LLM alignment using GRPO and Ray-based actor management.}
+}
+
+\newglossaryentry{nemorun}{
+  name        = {NeMo-Run},
+  description = {Job orchestration framework translating runspecs into Slurm jobs, managing containers and profiles.}
+}
+
+\newglossaryentry{wandbartifact}{
+  name        = {W\&B artifact},
+  description = {A versioned data object in Weights \& Biases used for tracking inter-stage pipeline handoffs.}
+}
+
+\newglossaryentry{packedsequence}{
+  name        = {packed sequence},
+  description = {A data format concatenating multiple sequences into one to eliminate padding and maximize hardware use.}
+}
+
+\newglossaryentry{losmask}{
+  name        = {loss mask},
+  description = {A binary mask in SFT ensuring the model only learns from assistant tokens by zeroing others.}
+}
+
+\newglossaryentry{gls-grpo}{
+  name        = {GRPO},
+  description = {Group Relative Policy Optimization — an RL algorithm using group-relative advantages for policy updates.}
+}
+
+% ── CHAPTER 4 — MIGRATION IMPLEMENTATION ────────────────────
+
+\newglossaryentry{torchnpu}{
+  name        = {torch\_npu},
+  description = {Huawei extension registering Ascend NPUs as a native PyTorch device type.}
+}
+
+\newglossaryentry{transfertonpu}{
+  name        = {transfer\_to\_npu()},
+  description = {Utility monkey-patching CUDA calls to NPU for transparent device migration.}
+}
+
+\newglossaryentry{selectivescan}{
+  name        = {selective scan},
+  description = {The core recurrence operation of Mamba SSM layers, processing input-dependent state updates.}
+}
+
+\newglossaryentry{expertcollapse}{
+  name        = {expert collapse},
+  description = {A failure mode in MoE where tokens are routed to few experts, underutilizing model capacity.}
+}
+
+\newglossaryentry{chunkedscan}{
+  name        = {chunked scan},
+  description = {An optimized Mamba scan processing input in fixed-size blocks to reduce Python loop overhead.}
+}
+
+\newglossaryentry{gls-mindie}{
+  name        = {MindIE},
+  description = {Huawei Mind Inference Engine — an LLM serving framework for Ascend NPUs with operator fusion.}
+}
+
+\newglossaryentry{kvCache}{
+  name        = {KV-cache},
+  description = {Memory structure storing attention keys and values to speed up incremental token decoding.}
+}
+
+\newglossaryentry{vllmascend}{
+  name        = {vLLM-Ascend},
+  description = {Fork of vLLM with an Ascend NPU backend for high-throughput model serving.}
+}
+
+\newglossaryentry{loadbalancing}{
+  name        = {load-balancing loss},
+  description = {Auxiliary loss in MoE models encouraging uniform token distribution across all experts.}
+}
+
+\newglossaryentry{autocast}{
+  name        = {autocast},
+  description = {Context manager for automatic mixed-precision (FP16/BF16) to reduce memory and increase speed.}
+}
+
+\newglossaryentry{rougel}{
+  name        = {ROUGE-L},
+  description = {Text evaluation metric based on the longest common subsequence between hypothesis and reference.}
+}
+
+\newglossaryentry{chattemplate}{
+  name        = {chat template},
+  description = {Formatting applied to role-labeled messages to create the token sequence for an LLM.}
+}
+
+\newglossaryentry{tensorparallelism}{
+  name        = {tensor parallelism},
+  description = {Distributed strategy partitioning weight matrices across devices to reduce partial results.}
+}
+
+\newglossaryentry{contextparallelism}{
+  name        = {context parallelism},
+  description = {Distributed strategy partitioning input sequences across device groups for attention computation.}
+}

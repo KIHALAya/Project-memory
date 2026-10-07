@@ -1,0 +1,3548 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{kafka-docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b499b5be8914246b406785e1327dbb3}{%
+           family={{Apache Software Foundation}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{fullhash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{fullhashraw}{8b499b5be8914246b406785e1327dbb3}
+      \strng{bibnamehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authorbibnamehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authornamehash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authorfullhash}{8b499b5be8914246b406785e1327dbb3}
+      \strng{authorfullhashraw}{8b499b5be8914246b406785e1327dbb3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache Kafka Documentation}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://kafka.apache.org/documentation/
+      \endverb
+      \verb{url}
+      \verb https://kafka.apache.org/documentation/
+      \endverb
+    \endentry
+    \entry{bloomberg-huawei-comeback}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=208421fcbc090a62f099f85472ded9ba}{%
+           family={{Bloomberg}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{208421fcbc090a62f099f85472ded9ba}
+      \strng{fullhash}{208421fcbc090a62f099f85472ded9ba}
+      \strng{fullhashraw}{208421fcbc090a62f099f85472ded9ba}
+      \strng{bibnamehash}{208421fcbc090a62f099f85472ded9ba}
+      \strng{authorbibnamehash}{208421fcbc090a62f099f85472ded9ba}
+      \strng{authornamehash}{208421fcbc090a62f099f85472ded9ba}
+      \strng{authorfullhash}{208421fcbc090a62f099f85472ded9ba}
+      \strng{authorfullhashraw}{208421fcbc090a62f099f85472ded9ba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{What Huawei's Comeback Says About US-China Tech War}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{brown2020gpt3}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=ad9f5a3d8c696d78ce2a831ce8ac7524}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{fullhash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{fullhashraw}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{bibnamehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{authorbibnamehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{authornamehash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{authorfullhash}{85437fe07696e4c57f916c83d4ba5581}
+      \strng{authorfullhashraw}{85437fe07696e4c57f916c83d4ba5581}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Neural Information Processing Systems (NeurIPS)}
+      \field{title}{Language Models Are Few-Shot Learners}
+      \field{volume}{33}
+      \field{year}{2020}
+    \endentry
+    \entry{chen-2025-vision}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5ecc04ab7cd8350e63b66dc42451fa3e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {CIO.com}%
+      }
+      \strng{namehash}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{fullhash}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{fullhashraw}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{bibnamehash}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{authorbibnamehash}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{authornamehash}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{authorfullhash}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \strng{authorfullhashraw}{5ecc04ab7cd8350e63b66dc42451fa3e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{From vision to action: Huawei's perspective on accelerating industrial digitalization and intelligent transformation}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.cio.com
+      \endverb
+      \verb{url}
+      \verb https://www.cio.com
+      \endverb
+    \endentry
+    \entry{chetlur2014cudnn}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=02904504dd2f0492d3e2b928b7f82437}{%
+           family={Chetlur},
+           familyi={C\bibinitperiod},
+           given={Sharan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{40c8231943de3fc49d32715e070292a1}
+      \strng{fullhash}{40c8231943de3fc49d32715e070292a1}
+      \strng{fullhashraw}{40c8231943de3fc49d32715e070292a1}
+      \strng{bibnamehash}{40c8231943de3fc49d32715e070292a1}
+      \strng{authorbibnamehash}{40c8231943de3fc49d32715e070292a1}
+      \strng{authornamehash}{40c8231943de3fc49d32715e070292a1}
+      \strng{authorfullhash}{40c8231943de3fc49d32715e070292a1}
+      \strng{authorfullhashraw}{40c8231943de3fc49d32715e070292a1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{{cuDNN}: Efficient Primitives for Deep Learning}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{eprint}
+      \verb 1410.0759
+      \endverb
+    \endentry
+    \entry{mobileworldlive-huawei-5g}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d5fef42de445a1adf564d8ad4bd39d2a}{%
+           family={{CIO}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{fullhash}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{fullhashraw}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{bibnamehash}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{authorbibnamehash}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{authornamehash}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{authorfullhash}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \strng{authorfullhashraw}{d5fef42de445a1adf564d8ad4bd39d2a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Huawei calls for 5G evolution to serve AI-driven demands}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.mobileworldlive.com
+      \endverb
+      \verb{url}
+      \verb https://www.mobileworldlive.com
+      \endverb
+    \endentry
+    \entry{kubernetes-docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0cb2a59444ef04aeca44654441071c35}{%
+           family={{Cloud Native Computing Foundation}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{fullhash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{fullhashraw}{0cb2a59444ef04aeca44654441071c35}
+      \strng{bibnamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorbibnamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authornamehash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorfullhash}{0cb2a59444ef04aeca44654441071c35}
+      \strng{authorfullhashraw}{0cb2a59444ef04aeca44654441071c35}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kubernetes Documentation}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://kubernetes.io/docs/
+      \endverb
+      \verb{url}
+      \verb https://kubernetes.io/docs/
+      \endverb
+    \endentry
+    \entry{cnn-middle-east-rd}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=2435a45b85628172c5a47122144a7c67}{%
+           family={{CNN}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2435a45b85628172c5a47122144a7c67}
+      \strng{fullhash}{2435a45b85628172c5a47122144a7c67}
+      \strng{fullhashraw}{2435a45b85628172c5a47122144a7c67}
+      \strng{bibnamehash}{2435a45b85628172c5a47122144a7c67}
+      \strng{authorbibnamehash}{2435a45b85628172c5a47122144a7c67}
+      \strng{authornamehash}{2435a45b85628172c5a47122144a7c67}
+      \strng{authorfullhash}{2435a45b85628172c5a47122144a7c67}
+      \strng{authorfullhashraw}{2435a45b85628172c5a47122144a7c67}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Huawei's Investment In R\&D Is Pioneering A New Wave of Innovation Across the Middle East}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{dao2023flashattention2}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=ede2395a7f566a456448fcb5f8222c99}{%
+           family={Dao},
+           familyi={D\bibinitperiod},
+           given={Tri},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{fullhash}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{fullhashraw}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{bibnamehash}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{authorbibnamehash}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{authornamehash}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{authorfullhash}{ede2395a7f566a456448fcb5f8222c99}
+      \strng{authorfullhashraw}{ede2395a7f566a456448fcb5f8222c99}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations (ICLR)}
+      \field{title}{{FlashAttention-2}: Faster Attention with Better Parallelism and Work Partitioning}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2307.08691
+      \endverb
+    \endentry
+    \entry{dettmers2022llmint8}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=67a40f4e13f66c2e43ce4d7d64b9d9a4}{%
+           family={Dettmers},
+           familyi={D\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{fullhash}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{fullhashraw}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{bibnamehash}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{authorbibnamehash}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{authornamehash}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{authorfullhash}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \strng{authorfullhashraw}{a50dbcd4c24eb2e86d45d36ef4076dc0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
+      \field{title}{{LLM.int8()}: 8-bit Matrix Multiplication for Transformers at Scale}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{developing-telecoms-data-center}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=82bc9493730ed576c8baa8ef43b8c50f}{%
+           family={{Developing Telecoms}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{fullhash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{fullhashraw}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{bibnamehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authorbibnamehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authornamehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authorfullhash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authorfullhashraw}{82bc9493730ed576c8baa8ef43b8c50f}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Consortium Formed to Build AI Data Centre in Morocco}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://developingtelecoms.com
+      \endverb
+      \verb{url}
+      \verb https://developingtelecoms.com
+      \endverb
+    \endentry
+    \entry{developing-telecoms-5g}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=82bc9493730ed576c8baa8ef43b8c50f}{%
+           family={{Developing Telecoms}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{fullhash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{fullhashraw}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{bibnamehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authorbibnamehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authornamehash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authorfullhash}{82bc9493730ed576c8baa8ef43b8c50f}
+      \strng{authorfullhashraw}{82bc9493730ed576c8baa8ef43b8c50f}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Inwi and China Mobile Deploy Private 5G for Factory in Morocco}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://developingtelecoms.com
+      \endverb
+      \verb{url}
+      \verb https://developingtelecoms.com
+      \endverb
+    \endentry
+    \entry{et-huawei-strides}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=105e17835d0ebe3ba29eb364b1b3a966}{%
+           family={{Economic Times}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{fullhash}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{fullhashraw}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{bibnamehash}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{authorbibnamehash}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{authornamehash}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{authorfullhash}{105e17835d0ebe3ba29eb364b1b3a966}
+      \strng{authorfullhashraw}{105e17835d0ebe3ba29eb364b1b3a966}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Huawei says it has made huge strides, from operating systems to AI}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{eleutherai2023lmeval}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=79da984d1c97de6649928aa1116a421c}{%
+           family={{EleutherAI}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{79da984d1c97de6649928aa1116a421c}
+      \strng{fullhash}{79da984d1c97de6649928aa1116a421c}
+      \strng{fullhashraw}{79da984d1c97de6649928aa1116a421c}
+      \strng{bibnamehash}{79da984d1c97de6649928aa1116a421c}
+      \strng{authorbibnamehash}{79da984d1c97de6649928aa1116a421c}
+      \strng{authornamehash}{79da984d1c97de6649928aa1116a421c}
+      \strng{authorfullhash}{79da984d1c97de6649928aa1116a421c}
+      \strng{authorfullhashraw}{79da984d1c97de6649928aa1116a421c}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zenodo}
+      \field{title}{A Framework for Few-Shot Language Model Evaluation}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.5281/zenodo.10256836
+      \endverb
+    \endentry
+    \entry{equalocean-huawei-cloud}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=736130eb5a6dc2fd29e8969e7c20b8b6}{%
+           family={{equalocean}},
+           familyi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{fullhash}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{fullhashraw}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{bibnamehash}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{authorbibnamehash}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{authornamehash}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{authorfullhash}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \strng{authorfullhashraw}{736130eb5a6dc2fd29e8969e7c20b8b6}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Huawei Cloud Breaks 1 Million Users Two Years After Release}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://equalocean.com
+      \endverb
+      \verb{url}
+      \verb https://equalocean.com
+      \endverb
+    \endentry
+    \entry{facebook-huawei-5g-leader}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d85544fce402c7a2a96a48078edaf203}{%
+           family={{Facebook}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{fullhash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{fullhashraw}{d85544fce402c7a2a96a48078edaf203}
+      \strng{bibnamehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authorbibnamehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authornamehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authorfullhash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authorfullhashraw}{d85544fce402c7a2a96a48078edaf203}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Huawei has been named the sole leader in the GlobalData 2025 5G RAN}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{facebook-future-smartcities}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d85544fce402c7a2a96a48078edaf203}{%
+           family={{Facebook}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{fullhash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{fullhashraw}{d85544fce402c7a2a96a48078edaf203}
+      \strng{bibnamehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authorbibnamehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authornamehash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authorfullhash}{d85544fce402c7a2a96a48078edaf203}
+      \strng{authorfullhashraw}{d85544fce402c7a2a96a48078edaf203}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{The future of smart cities}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{fedus2022switch}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=749d4fb83777d7b74c0ee8de5a510f41}{%
+           family={Fedus},
+           familyi={F\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=91aafc93e68e8c6a55e8cd804c2acaf2}{%
+           family={Zoph},
+           familyi={Z\bibinitperiod},
+           given={Barret},
+           giveni={B\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{27fc098359173279b89e523ea4cb07c6}
+      \strng{fullhash}{3a4d4f3ef7220737c921ca534c5e4379}
+      \strng{fullhashraw}{3a4d4f3ef7220737c921ca534c5e4379}
+      \strng{bibnamehash}{3a4d4f3ef7220737c921ca534c5e4379}
+      \strng{authorbibnamehash}{3a4d4f3ef7220737c921ca534c5e4379}
+      \strng{authornamehash}{27fc098359173279b89e523ea4cb07c6}
+      \strng{authorfullhash}{3a4d4f3ef7220737c921ca534c5e4379}
+      \strng{authorfullhashraw}{3a4d4f3ef7220737c921ca534c5e4379}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{title}{Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity}
+      \field{volume}{23}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{fierce-network-huawei-rd}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=2061ffca6116fe82331effcca759dce4}{%
+           family={{Fierce Network}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{2061ffca6116fe82331effcca759dce4}
+      \strng{fullhash}{2061ffca6116fe82331effcca759dce4}
+      \strng{fullhashraw}{2061ffca6116fe82331effcca759dce4}
+      \strng{bibnamehash}{2061ffca6116fe82331effcca759dce4}
+      \strng{authorbibnamehash}{2061ffca6116fe82331effcca759dce4}
+      \strng{authornamehash}{2061ffca6116fe82331effcca759dce4}
+      \strng{authorfullhash}{2061ffca6116fe82331effcca759dce4}
+      \strng{authorfullhashraw}{2061ffca6116fe82331effcca759dce4}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Huawei completes construction of its biggest R\&D center}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.fiercenetwork.com
+      \endverb
+      \verb{url}
+      \verb https://www.fiercenetwork.com
+      \endverb
+    \endentry
+    \entry{fortune-huawei-revenue}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=07f3fb85953bf41d154cba88825ee748}{%
+           family={{Fortune}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{07f3fb85953bf41d154cba88825ee748}
+      \strng{fullhash}{07f3fb85953bf41d154cba88825ee748}
+      \strng{fullhashraw}{07f3fb85953bf41d154cba88825ee748}
+      \strng{bibnamehash}{07f3fb85953bf41d154cba88825ee748}
+      \strng{authorbibnamehash}{07f3fb85953bf41d154cba88825ee748}
+      \strng{authornamehash}{07f3fb85953bf41d154cba88825ee748}
+      \strng{authorfullhash}{07f3fb85953bf41d154cba88825ee748}
+      \strng{authorfullhashraw}{07f3fb85953bf41d154cba88825ee748}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{Huawei's 2024 revenue exceeded \$118 billion and the company is thriving after US sanctions}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{fortune2025global500}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=eb237f35805b86b8215fd81f0241bc26}{%
+           family={{Fortune Media}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{fullhash}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{fullhashraw}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{bibnamehash}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{authorbibnamehash}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{authornamehash}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{authorfullhash}{eb237f35805b86b8215fd81f0241bc26}
+      \strng{authorfullhashraw}{eb237f35805b86b8215fd81f0241bc26}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Fortune Media}
+      \field{title}{Fortune {Global} 500 --- 2025 Rankings}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://fortune.com/global500/
+      \endverb
+      \verb{url}
+      \verb https://fortune.com/global500/
+      \endverb
+    \endentry
+    \entry{martin-fowler-microservices}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bc0d2dbdc2f0a7a80ec11019d6142dbb}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{fullhash}{416876065d6eb7d05b219dfec144635d}
+      \strng{fullhashraw}{416876065d6eb7d05b219dfec144635d}
+      \strng{bibnamehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authorbibnamehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authornamehash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authorfullhash}{416876065d6eb7d05b219dfec144635d}
+      \strng{authorfullhashraw}{416876065d6eb7d05b219dfec144635d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices: a definition of this new architectural term}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2024}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://martinfowler.com/articles/microservices.html
+      \endverb
+      \verb{url}
+      \verb https://martinfowler.com/articles/microservices.html
+      \endverb
+    \endentry
+    \entry{francispress-digital-transformation}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bd3d1674f3e56a06e32e42702df287d8}{%
+           family={{Francis Press}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{fullhash}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{fullhashraw}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{bibnamehash}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{authorbibnamehash}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{authornamehash}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{authorfullhash}{bd3d1674f3e56a06e32e42702df287d8}
+      \strng{authorfullhashraw}{bd3d1674f3e56a06e32e42702df287d8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Huawei's Digital Transformation Driving Innovation and Sustained Success}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://francispress.com
+      \endverb
+      \verb{url}
+      \verb https://francispress.com
+      \endverb
+    \endentry
+    \entry{globaltimes-fortune-500}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4c26cc4f01a05011972bd31b86b28854}{%
+           family={{Global Times}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{fullhash}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{fullhashraw}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{bibnamehash}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{authorbibnamehash}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{authornamehash}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{authorfullhash}{4c26cc4f01a05011972bd31b86b28854}
+      \strng{authorfullhashraw}{4c26cc4f01a05011972bd31b86b28854}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{130 Chinese companies enter 2025 Fortune Global 500 list, led by Huawei}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.globaltimes.cn
+      \endverb
+      \verb{url}
+      \verb https://www.globaltimes.cn
+      \endverb
+    \endentry
+    \entry{greyb-5g-patents}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9e3c36be77f3edf3967060c611651fd6}{%
+           family={{GreyB}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{fullhash}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{fullhashraw}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{bibnamehash}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{authorbibnamehash}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{authornamehash}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{authorfullhash}{9e3c36be77f3edf3967060c611651fd6}
+      \strng{authorfullhashraw}{9e3c36be77f3edf3967060c611651fd6}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Huawei is the Company with Most 5G Patents}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://insights.greyb.com
+      \endverb
+      \verb{url}
+      \verb https://insights.greyb.com
+      \endverb
+    \endentry
+    \entry{gsmarena-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=aa3fd45ce0fdbda627dceb42cee19e51}{%
+           family={{GSMArena}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{fullhash}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{fullhashraw}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{bibnamehash}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{authorbibnamehash}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{authornamehash}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{authorfullhash}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \strng{authorfullhashraw}{aa3fd45ce0fdbda627dceb42cee19e51}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{All Huawei phones}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.gsmarena.com/huawei-phones-58.php
+      \endverb
+      \verb{url}
+      \verb https://www.gsmarena.com/huawei-phones-58.php
+      \endverb
+    \endentry
+    \entry{gu2024mamba}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=aa9ec56190423bb01ead50d96b94ba93}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ede2395a7f566a456448fcb5f8222c99}{%
+           family={Dao},
+           familyi={D\bibinitperiod},
+           given={Tri},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{babde771e7de935487275312d2f755a5}
+      \strng{fullhash}{babde771e7de935487275312d2f755a5}
+      \strng{fullhashraw}{babde771e7de935487275312d2f755a5}
+      \strng{bibnamehash}{babde771e7de935487275312d2f755a5}
+      \strng{authorbibnamehash}{babde771e7de935487275312d2f755a5}
+      \strng{authornamehash}{babde771e7de935487275312d2f755a5}
+      \strng{authorfullhash}{babde771e7de935487275312d2f755a5}
+      \strng{authorfullhashraw}{babde771e7de935487275312d2f755a5}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations (ICLR)}
+      \field{title}{Mamba: Linear-Time Sequence Modeling with Selective State Spaces}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2312.00752
+      \endverb
+    \endentry
+    \entry{handwiki-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=22ce87ecbf938f6bc5403e5938971e87}{%
+           family={{HandWiki}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{fullhash}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{fullhashraw}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{bibnamehash}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{authorbibnamehash}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{authornamehash}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{authorfullhash}{22ce87ecbf938f6bc5403e5938971e87}
+      \strng{authorfullhashraw}{22ce87ecbf938f6bc5403e5938971e87}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{Company:Huawei}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://handwiki.org
+      \endverb
+      \verb{url}
+      \verb https://handwiki.org
+      \endverb
+    \endentry
+    \entry{hendrycks2021mmlu}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=86d0b4ecd6b6066d49e7aecde6e5e630}{%
+           family={Hendrycks},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f461c117afa272374439d2db3ee67282}
+      \strng{fullhash}{f461c117afa272374439d2db3ee67282}
+      \strng{fullhashraw}{f461c117afa272374439d2db3ee67282}
+      \strng{bibnamehash}{f461c117afa272374439d2db3ee67282}
+      \strng{authorbibnamehash}{f461c117afa272374439d2db3ee67282}
+      \strng{authornamehash}{f461c117afa272374439d2db3ee67282}
+      \strng{authorfullhash}{f461c117afa272374439d2db3ee67282}
+      \strng{authorfullhashraw}{f461c117afa272374439d2db3ee67282}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations (ICLR)}
+      \field{title}{Measuring Massive Multitask Language Understanding}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2009.03300
+      \endverb
+    \endentry
+    \entry{hennessy2019golden}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=4a72d9e0de431dadafab463df2ea7b0f}{%
+           family={Hennessy},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=95486d328725c1c6a933929c9442fe2a}{%
+           family={Patterson},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{fullhash}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{fullhashraw}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{bibnamehash}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{authorbibnamehash}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{authornamehash}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{authorfullhash}{f7c6979c0d2d2afa03b2d508432d429d}
+      \strng{authorfullhashraw}{f7c6979c0d2d2afa03b2d508432d429d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Communications of the ACM}
+      \field{number}{2}
+      \field{title}{A New Golden Age for Computer Architecture}
+      \field{volume}{62}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
+    \entry{hespress-data-center}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=adc3f1a712fd8bf984cce84db07bb19f}{%
+           family={{HESPRESS English}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{fullhash}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{fullhashraw}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{bibnamehash}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{authorbibnamehash}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{authornamehash}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{authorfullhash}{adc3f1a712fd8bf984cce84db07bb19f}
+      \strng{authorfullhashraw}{adc3f1a712fd8bf984cce84db07bb19f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{A planned next generation data center dedicated to artificial intelligence is moving closer to reality in Morocco}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://en.hespress.com
+      \endverb
+      \verb{url}
+      \verb https://en.hespress.com
+      \endverb
+    \endentry
+    \entry{hsieh2024ruler}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=e35969147a3d81230a490a286da67e44}{%
+           family={Hsieh},
+           familyi={H\bibinitperiod},
+           given={Cheng-Ping},
+           giveni={C\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{fullhash}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{fullhashraw}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{bibnamehash}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{authorbibnamehash}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{authornamehash}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{authorfullhash}{8d7254e9e6e6deec640b11f1c02556d3}
+      \strng{authorfullhashraw}{8d7254e9e6e6deec640b11f1c02556d3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{arXiv preprint}
+      \field{title}{{RULER}: What's the Real Context Size of Your Long Context Language Models?}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2404.06654
+      \endverb
+    \endentry
+    \entry{mindie2024}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=10fdde4efbf97ac0b07284b70768dbaa}{%
+           family={{Huawei Ascend Developer Community}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Huawei Technologies}%
+      }
+      \strng{namehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{fullhash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{fullhashraw}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{bibnamehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authorbibnamehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authornamehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authorfullhash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authorfullhashraw}{10fdde4efbf97ac0b07284b70768dbaa}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{MindIE}: {Huawei} {Mind} Inference Engine Architecture and Optimisation Guide}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.hiascend.com/en/software/mindie
+      \endverb
+      \verb{url}
+      \verb https://www.hiascend.com/en/software/mindie
+      \endverb
+    \endentry
+    \entry{pytorch2024npu}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=10fdde4efbf97ac0b07284b70768dbaa}{%
+           family={{Huawei Ascend Developer Community}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Huawei Technologies}%
+      }
+      \strng{namehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{fullhash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{fullhashraw}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{bibnamehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authorbibnamehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authornamehash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authorfullhash}{10fdde4efbf97ac0b07284b70768dbaa}
+      \strng{authorfullhashraw}{10fdde4efbf97ac0b07284b70768dbaa}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{torch\_npu}: {PyTorch} Adapter for Huawei Ascend {NPU} --- Developer Guide}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/Ascend/pytorch
+      \endverb
+      \verb{url}
+      \verb https://github.com/Ascend/pytorch
+      \endverb
+    \endentry
+    \entry{huawei-central-22b}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6ea730bf75298aa6ad846a01b9fd8cac}{%
+           family={{Huawei Central}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{bibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorbibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authornamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Huawei is investing \$22 billion yearly for R\&D and Innovation: Expert}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{huawei-central-openharmony}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6ea730bf75298aa6ad846a01b9fd8cac}{%
+           family={{Huawei Central}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{bibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorbibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authornamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Over 2000 developers supported OpenHarmony development: Huawei Chairman}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huaweicentral.com
+      \endverb
+      \verb{url}
+      \verb https://www.huaweicentral.com
+      \endverb
+    \endentry
+    \entry{huawei-central-innovative}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6ea730bf75298aa6ad846a01b9fd8cac}{%
+           family={{Huawei Central}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{bibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorbibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authornamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \field{extraname}{3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Chairman hints at more innovative smartphones in Huawei's pipeline for 2025}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huaweicentral.com
+      \endverb
+      \verb{url}
+      \verb https://www.huaweicentral.com
+      \endverb
+    \endentry
+    \entry{huawei-central-pocket3}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6ea730bf75298aa6ad846a01b9fd8cac}{%
+           family={{Huawei Central}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{fullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{bibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorbibnamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authornamehash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhash}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \strng{authorfullhashraw}{6ea730bf75298aa6ad846a01b9fd8cac}
+      \field{extraname}{4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Huawei may launch 4 new devices this month including Pocket 3}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huaweicentral.com
+      \endverb
+      \verb{url}
+      \verb https://www.huaweicentral.com
+      \endverb
+    \endentry
+    \entry{modelarts2024}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=a1c2e9da612abcaee448d068b974f7dd}{%
+           family={{Huawei Cloud}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Huawei Cloud}%
+      }
+      \strng{namehash}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{fullhash}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{fullhashraw}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{bibnamehash}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{authorbibnamehash}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{authornamehash}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{authorfullhash}{a1c2e9da612abcaee448d068b974f7dd}
+      \strng{authorfullhashraw}{a1c2e9da612abcaee448d068b974f7dd}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ModelArts}: {AI} Development Platform --- Technical Documentation}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huaweicloud.com/product/modelarts.html
+      \endverb
+      \verb{url}
+      \verb https://www.huaweicloud.com/product/modelarts.html
+      \endverb
+    \endentry
+    \entry{huawei-nextgen-smartcity}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=19ea82131a197e7a7650b3f5963a377f}{%
+           family={{Huawei Enterprise}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{bibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorbibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authornamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{Huawei Launches a Next-Gen Smart City Solution}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/fr/news/2024/industries/government/twin-next-gen-city-solution
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/fr/news/2024/industries/government/twin-next-gen-city-solution
+      \endverb
+    \endentry
+    \entry{huawei-enterprise-pioneers}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=19ea82131a197e7a7650b3f5963a377f}{%
+           family={{Huawei Enterprise}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{bibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorbibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authornamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{African Intelligent Pioneers}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/ma
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/ma
+      \endverb
+    \endentry
+    \entry{huawei-enterprise-data-center}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=19ea82131a197e7a7650b3f5963a377f}{%
+           family={{Huawei Enterprise}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{bibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorbibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authornamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \field{extraname}{3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Data Center Portfolio Solution}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/en/solutions/data-center
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/en/solutions/data-center
+      \endverb
+    \endentry
+    \entry{huawei-enterprise-africa}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=19ea82131a197e7a7650b3f5963a377f}{%
+           family={{Huawei Enterprise}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{fullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{bibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorbibnamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authornamehash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhash}{19ea82131a197e7a7650b3f5963a377f}
+      \strng{authorfullhashraw}{19ea82131a197e7a7650b3f5963a377f}
+      \field{extraname}{4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Huawei Enterprise | Accelerate Industrial Intelligence}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/ma/
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/ma/
+      \endverb
+    \endentry
+    \entry{huawei-italy-rd}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=fd1db6b869182ea5327c43685a1cabff}{%
+           family={{Huawei Europe}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{fullhash}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{fullhashraw}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{bibnamehash}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{authorbibnamehash}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{authornamehash}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{authorfullhash}{fd1db6b869182ea5327c43685a1cabff}
+      \strng{authorfullhashraw}{fd1db6b869182ea5327c43685a1cabff}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Huawei Italy Research Centers}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{huawei2025annual}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=f5610a38ce29e5a5e6f9a3595623751a}{%
+           family={{Huawei Investment \& Holding Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Huawei Technologies Co., Ltd.}%
+      }
+      \strng{namehash}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{fullhash}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{fullhashraw}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{bibnamehash}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{authorbibnamehash}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{authornamehash}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{authorfullhash}{f5610a38ce29e5a5e6f9a3595623751a}
+      \strng{authorfullhashraw}{f5610a38ce29e5a5e6f9a3595623751a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Annual Report 2024}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/annual-report
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/annual-report
+      \endverb
+    \endentry
+    \entry{huawei-cloud-press-2017}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Trusted and Open Huawei Public Cloud Makes Business Agile}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2017/4/Huawei-Public-Cloud-Business-Agile
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2017/4/Huawei-Public-Cloud-Business-Agile
+      \endverb
+    \endentry
+    \entry{huawei2019ascend910}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Huawei Technologies}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ascend 910: The Most Powerful {AI} Processor --- Technical Specification}
+      \field{type}{techreport}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/en/products/servers/ascend
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/en/products/servers/ascend
+      \endverb
+    \endentry
+    \entry{rain-huawei-5g}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{Rain and Huawei Jointly Launch the First 5G Commercial Network in South Africa}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2019/2/rain-huawei-first-5g-commercial-network-south-africa
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2019/2/rain-huawei-first-5g-commercial-network-south-africa
+      \endverb
+    \endentry
+    \entry{huawei2023cann}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Huawei Technologies}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CANN} (Compute Architecture for Neural Networks) White Paper}
+      \field{type}{techreport}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.hiascend.com/en/software/cann
+      \endverb
+      \verb{url}
+      \verb https://www.hiascend.com/en/software/cann
+      \endverb
+    \endentry
+    \entry{huawei-5ga-industry}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{5}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Huawei Announces 5G-A Industry and Technology Evolution Direction to Promote Shared Success}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2024/6/MWCS-5G-A-AI-Era
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2024/6/MWCS-5G-A-AI-Era
+      \endverb
+    \endentry
+    \entry{huawei-digital-africa-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Huawei holds Digital Africa Summit, Accelerating Intelligence for New Africa}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/fr/news/2024/branding/accelerate-intelligence-for-new-africa
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/fr/news/2024/branding/accelerate-intelligence-for-new-africa
+      \endverb
+    \endentry
+    \entry{huawei-four-new}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{7}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Huawei Proposes the FOUR NEW Strategy to Help Carriers}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2024/10/ubbf-four-new-strategy
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2024/10/ubbf-four-new-strategy
+      \endverb
+    \endentry
+    \entry{huawei-open-innovation}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Advancing Innovation with Openness}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2025/11/2025ipr-advancing-innovation
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2025/11/2025ipr-advancing-innovation
+      \endverb
+    \endentry
+    \entry{cio-huawei-vision}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {CIO.com}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{From vision to action: Huawei's perspective on accelerating industrial digitalization and intelligent transformation}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{huawei-5g-core-leader}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{10}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Huawei 5G Core Named 'Leader' for Seventh Consecutive Year}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2025/8/fullscore-alldomain-award
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2025/8/fullscore-alldomain-award
+      \endverb
+    \endentry
+    \entry{huawei-mwc-2025-awards}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{11}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Huawei and Partners Win Industry Awards at MWC Shanghai 2025}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/en/news/2025/6/mwc-shanghai-awards
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/en/news/2025/6/mwc-shanghai-awards
+      \endverb
+    \endentry
+    \entry{huawei-5g-ran-leader}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{12}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Huawei Named Sole Leader in GlobalData 2025 '5G RAN: Competitive Landscape Assessment'}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2025/8/globaldata-huawei-5gran-leader
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2025/8/globaldata-huawei-5gran-leader
+      \endverb
+    \endentry
+    \entry{huawei-rotating-sabrina}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{13}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{Notice on Rotating Chair Tenure – Sabrina Meng assumes position Oct 1, 2025 to Mar 31, 2026}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2025/9/rotating-chair-tenure
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2025/9/rotating-chair-tenure
+      \endverb
+    \endentry
+    \entry{huawei-fact-sheet}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{14}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Company Facts – Corporate Fact Sheet}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/media-center/company-facts
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/media-center/company-facts
+      \endverb
+    \endentry
+    \entry{huawei-enterprise-products}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{15}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Enterprise All Products and Solutions}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/en/products-and-solutions
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/en/products-and-solutions
+      \endverb
+    \endentry
+    \entry{huawei-5ga-transport}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{16}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Huawei Unveils Three Key Values of 5G-A Mobile Transport}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/news/2026/3/mwc-three-key-value
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/news/2026/3/mwc-three-key-value
+      \endverb
+    \endentry
+    \entry{huawei-5g-spotlight}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{17}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{5G – Huawei Carrier Spotlight}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://carrier.huawei.com/en/spotlight/5g
+      \endverb
+      \verb{url}
+      \verb https://carrier.huawei.com/en/spotlight/5g
+      \endverb
+    \endentry
+    \entry{huawei-ascend-cann}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{18}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CANN (Compute Architecture for Neural Networks)}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.hiascend.com/en/software/cann
+      \endverb
+      \verb{url}
+      \verb https://www.hiascend.com/en/software/cann
+      \endverb
+    \endentry
+    \entry{huawei-governance}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{19}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Corporate Governance}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/corporate-governance
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/corporate-governance
+      \endverb
+    \endentry
+    \entry{huawei-corporate-info}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{20}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Corporate Information – Our Company}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/corporate-information
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/corporate-information
+      \endverb
+    \endentry
+    \entry{huawei-executives}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{21}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Executives}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/executives
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/executives
+      \endverb
+    \endentry
+    \entry{fusioncube-hci}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{22}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{FusionCube Hybrid Workload Solution}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/en/products/storage/hci/fusioncube-hci
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/en/products/storage/hci/fusioncube-hci
+      \endverb
+    \endentry
+    \entry{huawei-green-5g}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{23}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Green 5G: Building A Sustainable World}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/public-policy/green-5g-building-a-sustainable-world
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/public-policy/green-5g-building-a-sustainable-world
+      \endverb
+    \endentry
+    \entry{huawei-ipr}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{24}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Innovation and Intellectual Property}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/ipr
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/ipr
+      \endverb
+    \endentry
+    \entry{oceanstor-storage}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{25}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OceanStor Data Storage}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://e.huawei.com/en/products/storage
+      \endverb
+      \verb{url}
+      \verb https://e.huawei.com/en/products/storage
+      \endverb
+    \endentry
+    \entry{huawei-rd-info}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=73357e23aeb3b109c15ae34167e15198}{%
+           family={{Huawei Technologies Co., Ltd.}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{fullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \strng{bibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorbibnamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authornamehash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhash}{73357e23aeb3b109c15ae34167e15198}
+      \strng{authorfullhashraw}{73357e23aeb3b109c15ae34167e15198}
+      \field{extraname}{26}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Research and Innovation}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.huawei.com/en/corporate-information/research-development
+      \endverb
+      \verb{url}
+      \verb https://www.huawei.com/en/corporate-information/research-development
+      \endverb
+    \endentry
+    \entry{iea2024electricity}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=b33b47b3008c8c47f90a77e0c2dd3060}{%
+           family={{International Energy Agency}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IEA}%
+      }
+      \strng{namehash}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{fullhash}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{fullhashraw}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{bibnamehash}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{authorbibnamehash}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{authornamehash}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{authorfullhash}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \strng{authorfullhashraw}{b33b47b3008c8c47f90a77e0c2dd3060}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Electricity 2024: Analysis and Forecast to 2026}
+      \field{type}{techreport}
+      \field{year}{2024}
+    \endentry
+    \entry{iea-data-center-energy}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=680ce87ff3ae8510ed56f7f1a277d47e}{%
+           family={{International Energy Agency (IEA)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{fullhash}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{fullhashraw}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{bibnamehash}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{authorbibnamehash}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{authornamehash}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{authorfullhash}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \strng{authorfullhashraw}{680ce87ff3ae8510ed56f7f1a277d47e}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Centers and Data Transmission Networks}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.iea.org/reports/data-centers-and-data-transmission-networks
+      \endverb
+      \verb{url}
+      \verb https://www.iea.org/reports/data-centers-and-data-transmission-networks
+      \endverb
+    \endentry
+    \entry{itif-export-controls}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1b067b97646700927a4704ed6b771a5f}{%
+           family={{ITIF}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b067b97646700927a4704ed6b771a5f}
+      \strng{fullhash}{1b067b97646700927a4704ed6b771a5f}
+      \strng{fullhashraw}{1b067b97646700927a4704ed6b771a5f}
+      \strng{bibnamehash}{1b067b97646700927a4704ed6b771a5f}
+      \strng{authorbibnamehash}{1b067b97646700927a4704ed6b771a5f}
+      \strng{authornamehash}{1b067b97646700927a4704ed6b771a5f}
+      \strng{authorfullhash}{1b067b97646700927a4704ed6b771a5f}
+      \strng{authorfullhashraw}{1b067b97646700927a4704ed6b771a5f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Backfire: Export Controls Helped Huawei and Hurt U.S. Firms}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://itif.org
+      \endverb
+      \verb{url}
+      \verb https://itif.org
+      \endverb
+    \endentry
+    \entry{jouppi2017tpu}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b1e691fb22f06afee78c3d52bf0c68f4}{%
+           family={Jouppi},
+           familyi={J\bibinitperiod},
+           given={Norman\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{861372c55b71e7688d63b889756999ce}
+      \strng{fullhash}{861372c55b71e7688d63b889756999ce}
+      \strng{fullhashraw}{861372c55b71e7688d63b889756999ce}
+      \strng{bibnamehash}{861372c55b71e7688d63b889756999ce}
+      \strng{authorbibnamehash}{861372c55b71e7688d63b889756999ce}
+      \strng{authornamehash}{861372c55b71e7688d63b889756999ce}
+      \strng{authorfullhash}{861372c55b71e7688d63b889756999ce}
+      \strng{authorfullhashraw}{861372c55b71e7688d63b889756999ce}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 44th Annual International Symposium on Computer Architecture (ISCA)}
+      \field{title}{In-Datacenter Performance Analysis of a Tensor Processing Unit}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{kerix-huawei-morocco}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bda7681cf7e9166e54d802b5e745523c}{%
+           family={{Kerix}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{fullhash}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{fullhashraw}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{bibnamehash}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{authorbibnamehash}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{authornamehash}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{authorfullhash}{bda7681cf7e9166e54d802b5e745523c}
+      \strng{authorfullhashraw}{bda7681cf7e9166e54d802b5e745523c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Huawei Technologies Morocco – B2B Directory}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.kerix.net/en/annuaire-entreprise/huawei-technologies-morocco
+      \endverb
+      \verb{url}
+      \verb https://www.kerix.net/en/annuaire-entreprise/huawei-technologies-morocco
+      \endverb
+    \endentry
+    \entry{kirk2016programming}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=d3aa2dfd7bd68dcafe8f2c42acff8258}{%
+           family={Kirk},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=720f32a4424db239592c327c78132fda}{%
+           family={Hwu},
+           familyi={H\bibinitperiod},
+           given={Wen-mei\bibnamedelima W.},
+           giveni={W\bibinithyphendelim m\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{a30eca11e66859473b94a70935f018e7}
+      \strng{fullhash}{a30eca11e66859473b94a70935f018e7}
+      \strng{fullhashraw}{a30eca11e66859473b94a70935f018e7}
+      \strng{bibnamehash}{a30eca11e66859473b94a70935f018e7}
+      \strng{authorbibnamehash}{a30eca11e66859473b94a70935f018e7}
+      \strng{authornamehash}{a30eca11e66859473b94a70935f018e7}
+      \strng{authorfullhash}{a30eca11e66859473b94a70935f018e7}
+      \strng{authorfullhashraw}{a30eca11e66859473b94a70935f018e7}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{Programming Massively Parallel Processors: A Hands-on Approach}
+      \field{year}{2016}
+      \true{nocite}
+    \endentry
+    \entry{vllm2023}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=3127ee56e9c5b4624fe744d4cbb4cfae}{%
+           family={Kwon},
+           familyi={K\bibinitperiod},
+           given={Woosuk},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{fullhash}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{fullhashraw}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{bibnamehash}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{authorbibnamehash}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{authornamehash}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{authorfullhash}{dd534d6c7046a3f7b2811b8ac2696584}
+      \strng{authorfullhashraw}{dd534d6c7046a3f7b2811b8ac2696584}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 29th Symposium on Operating Systems Principles (SOSP)}
+      \field{title}{Efficient Memory Management for Large Language Model Serving with {PagedAttention}}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+    \entry{linkedin-ict-competition}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e884c507c5198a4578a84498f7a323e2}{%
+           family={{LinkedIn}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhashraw}{e884c507c5198a4578a84498f7a323e2}
+      \strng{bibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorbibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authornamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhashraw}{e884c507c5198a4578a84498f7a323e2}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{The Huawei ICT Competition 2024-2025 Computing Track}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{linkedin-huawei-rd}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e884c507c5198a4578a84498f7a323e2}{%
+           family={{LinkedIn}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhashraw}{e884c507c5198a4578a84498f7a323e2}
+      \strng{bibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorbibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authornamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhashraw}{e884c507c5198a4578a84498f7a323e2}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Huawei Invests \$27.5B in Record R\&D}
+      \field{year}{2026}
+      \true{nocite}
+    \endentry
+    \entry{linkedin-huaweiena}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e884c507c5198a4578a84498f7a323e2}{%
+           family={{LinkedIn}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{fullhashraw}{e884c507c5198a4578a84498f7a323e2}
+      \strng{bibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorbibnamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authornamehash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhash}{e884c507c5198a4578a84498f7a323e2}
+      \strng{authorfullhashraw}{e884c507c5198a4578a84498f7a323e2}
+      \field{extraname}{3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Huawei Enterprise Northern Africa}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://ma.linkedin.com/company/huaweiena
+      \endverb
+      \verb{url}
+      \verb https://ma.linkedin.com/company/huaweiena
+      \endverb
+    \endentry
+    \entry{maroc-ma-5g}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c44a12feba70fe5ab1953ef96ff989ba}{%
+           family={{Maroc.ma}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{fullhash}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{fullhashraw}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{bibnamehash}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{authorbibnamehash}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{authornamehash}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{authorfullhash}{c44a12feba70fe5ab1953ef96ff989ba}
+      \strng{authorfullhashraw}{c44a12feba70fe5ab1953ef96ff989ba}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Morocco Goes 5G as Operators Roll Out Next-Generation Connectivity}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.maroc.ma
+      \endverb
+      \verb{url}
+      \verb https://www.maroc.ma
+      \endverb
+    \endentry
+    \entry{bitcoin-huawei-chip}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=27e70af77bb0a1a0fb53f494a76f6df7}{%
+           family={{MEXC News}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{fullhash}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{fullhashraw}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{bibnamehash}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{authorbibnamehash}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{authornamehash}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{authorfullhash}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \strng{authorfullhashraw}{27e70af77bb0a1a0fb53f494a76f6df7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{Huawei goes public with chip ambitions, boosting China's tech autonomy post-Nvidia}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://bitcoinetherenews.com
+      \endverb
+      \verb{url}
+      \verb https://bitcoinetherenews.com
+      \endverb
+    \endentry
+    \entry{moomoo-openharmony}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e3ad257adb9292fdeac517502c6ccef4}{%
+           family={{Moomoo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{fullhash}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{fullhashraw}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{bibnamehash}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{authorbibnamehash}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{authornamehash}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{authorfullhash}{e3ad257adb9292fdeac517502c6ccef4}
+      \strng{authorfullhashraw}{e3ad257adb9292fdeac517502c6ccef4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Huawei's Open Source Hongmeng's 'Report Card' revealed}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.moomoo.com
+      \endverb
+      \verb{url}
+      \verb https://www.moomoo.com
+      \endverb
+    \endentry
+    \entry{morocco-times-ict}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b574939c7046edcc3e27272909848706}{%
+           family={{Morocco Times}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b574939c7046edcc3e27272909848706}
+      \strng{fullhash}{b574939c7046edcc3e27272909848706}
+      \strng{fullhashraw}{b574939c7046edcc3e27272909848706}
+      \strng{bibnamehash}{b574939c7046edcc3e27272909848706}
+      \strng{authorbibnamehash}{b574939c7046edcc3e27272909848706}
+      \strng{authornamehash}{b574939c7046edcc3e27272909848706}
+      \strng{authorfullhash}{b574939c7046edcc3e27272909848706}
+      \strng{authorfullhashraw}{b574939c7046edcc3e27272909848706}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Great Success of the Huawei ICT Academy and ENSAM Casablanca Academy Alliance}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://moroccotimes.tv
+      \endverb
+      \verb{url}
+      \verb https://moroccotimes.tv
+      \endverb
+    \endentry
+    \entry{morocco-world-news-train}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=661da85989432057ac55b311366b28fb}{%
+           family={{Morocco World News}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{661da85989432057ac55b311366b28fb}
+      \strng{fullhash}{661da85989432057ac55b311366b28fb}
+      \strng{fullhashraw}{661da85989432057ac55b311366b28fb}
+      \strng{bibnamehash}{661da85989432057ac55b311366b28fb}
+      \strng{authorbibnamehash}{661da85989432057ac55b311366b28fb}
+      \strng{authornamehash}{661da85989432057ac55b311366b28fb}
+      \strng{authorfullhash}{661da85989432057ac55b311366b28fb}
+      \strng{authorfullhashraw}{661da85989432057ac55b311366b28fb}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Huawei Morocco Hosts Summit to Train Instructors, Students in ICT}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.moroccoworldnews.com
+      \endverb
+      \verb{url}
+      \verb https://www.moroccoworldnews.com
+      \endverb
+    \endentry
+    \entry{morocco-world-news-summit}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=661da85989432057ac55b311366b28fb}{%
+           family={{Morocco World News}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{661da85989432057ac55b311366b28fb}
+      \strng{fullhash}{661da85989432057ac55b311366b28fb}
+      \strng{fullhashraw}{661da85989432057ac55b311366b28fb}
+      \strng{bibnamehash}{661da85989432057ac55b311366b28fb}
+      \strng{authorbibnamehash}{661da85989432057ac55b311366b28fb}
+      \strng{authornamehash}{661da85989432057ac55b311366b28fb}
+      \strng{authorfullhash}{661da85989432057ac55b311366b28fb}
+      \strng{authorfullhashraw}{661da85989432057ac55b311366b28fb}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Huawei Digital Morocco Summit 2025: Building an AI-Powered Future}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.moroccoworldnews.com
+      \endverb
+      \verb{url}
+      \verb https://www.moroccoworldnews.com
+      \endverb
+    \endentry
+    \entry{newsofbahrain-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=da7d3dd7e4267db86147a9d8c1efcd42}{%
+           family={{Newsofbahrain}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{fullhash}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{fullhashraw}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{bibnamehash}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{authorbibnamehash}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{authornamehash}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{authorfullhash}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \strng{authorfullhashraw}{da7d3dd7e4267db86147a9d8c1efcd42}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Huawei Reaffirms Commitment to Open Innovation and IP Protection}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.newsofbahrain.com
+      \endverb
+      \verb{url}
+      \verb https://www.newsofbahrain.com
+      \endverb
+    \endentry
+    \entry{nickolls2008cuda}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=4e9afb5dec66f82dce8dd9cd8b94345c}{%
+           family={Nickolls},
+           familyi={N\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{fullhash}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{fullhashraw}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{bibnamehash}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{authorbibnamehash}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{authornamehash}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{authorfullhash}{8cb7d32ec75904edfafaff49577f267c}
+      \strng{authorfullhashraw}{8cb7d32ec75904edfafaff49577f267c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Queue}
+      \field{number}{2}
+      \field{title}{Scalable Parallel Programming with {CUDA}}
+      \field{volume}{6}
+      \field{year}{2008}
+      \true{nocite}
+    \endentry
+    \entry{nvidia-h100-specs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a2fe9051fe051f819bd739ef3e340377}{%
+           family={{NVIDIA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{fullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{fullhashraw}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{bibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorbibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authornamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorfullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorfullhashraw}{a2fe9051fe051f819bd739ef3e340377}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NVIDIA H100 Tensor Core GPU Architecture}
+      \field{year}{2022}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.nvidia.com/en-us/data-center/h100/
+      \endverb
+      \verb{url}
+      \verb https://www.nvidia.com/en-us/data-center/h100/
+      \endverb
+    \endentry
+    \entry{nvidia2025nemotron}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=a2fe9051fe051f819bd739ef3e340377}{%
+           family={{NVIDIA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {NVIDIA Corporation}%
+      }
+      \strng{namehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{fullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{fullhashraw}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{bibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorbibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authornamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorfullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorfullhashraw}{a2fe9051fe051f819bd739ef3e340377}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nemotron 3 Nano: Open, Efficient Mixture-of-Experts for Mobile and Edge Devices}
+      \field{type}{techreport}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/NVIDIA-NeMo/Nemotron
+      \endverb
+      \verb{url}
+      \verb https://github.com/NVIDIA-NeMo/Nemotron
+      \endverb
+    \endentry
+    \entry{opensourceforu-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=db1976885f62c1b492a12fbea1cbe19f}{%
+           family={{Open Source for U}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{fullhash}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{fullhashraw}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{bibnamehash}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{authorbibnamehash}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{authornamehash}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{authorfullhash}{db1976885f62c1b492a12fbea1cbe19f}
+      \strng{authorfullhashraw}{db1976885f62c1b492a12fbea1cbe19f}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Huawei's OpenHarmony And openEuler Drive Digital Sovereignty In The Middle East}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.opensourceforu.com
+      \endverb
+      \verb{url}
+      \verb https://www.opensourceforu.com
+      \endverb
+    \endentry
+    \entry{orchid-island-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=52f37a9ed6260d78de725791fd661f0b}{%
+           family={{Orchid Island}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{fullhash}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{fullhashraw}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{bibnamehash}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{authorbibnamehash}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{authornamehash}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{authorfullhash}{52f37a9ed6260d78de725791fd661f0b}
+      \strng{authorfullhashraw}{52f37a9ed6260d78de725791fd661f0b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{How Huawei's Impact on Morocco Tech Innovation}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.orchidisland.immo
+      \endverb
+      \verb{url}
+      \verb https://www.orchidisland.immo
+      \endverb
+    \endentry
+    \entry{oreateai-huawei-ecosystem}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=33acf400b3a0a749cdc06125861a051b}{%
+           family={{OreateAI}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{33acf400b3a0a749cdc06125861a051b}
+      \strng{fullhash}{33acf400b3a0a749cdc06125861a051b}
+      \strng{fullhashraw}{33acf400b3a0a749cdc06125861a051b}
+      \strng{bibnamehash}{33acf400b3a0a749cdc06125861a051b}
+      \strng{authorbibnamehash}{33acf400b3a0a749cdc06125861a051b}
+      \strng{authornamehash}{33acf400b3a0a749cdc06125861a051b}
+      \strng{authorfullhash}{33acf400b3a0a749cdc06125861a051b}
+      \strng{authorfullhashraw}{33acf400b3a0a749cdc06125861a051b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Huawei's Digital Technology Ecosystem Panorama Analysis: Strategic Layout of Kunpeng, Ascend, HMS, HarmonyOS}
+      \field{year}{2026}
+      \true{nocite}
+    \endentry
+    \entry{phonearena-huawei-flagships}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3d8ea23d8a64bebffe28e38d5550e87b}{%
+           family={{PhoneArena}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{fullhash}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{fullhashraw}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{bibnamehash}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{authorbibnamehash}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{authornamehash}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{authorfullhash}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \strng{authorfullhashraw}{3d8ea23d8a64bebffe28e38d5550e87b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Huawei has surprises in store for its 2025 flagship lines}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.phonearena.com
+      \endverb
+      \verb{url}
+      \verb https://www.phonearena.com
+      \endverb
+    \endentry
+    \entry{popular-timelines-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c5c020acc7f4434d50af2076ea4c5b48}{%
+           family={{Popular Timelines}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{fullhash}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{fullhashraw}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{bibnamehash}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{authorbibnamehash}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{authornamehash}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{authorfullhash}{c5c020acc7f4434d50af2076ea4c5b48}
+      \strng{authorfullhashraw}{c5c020acc7f4434d50af2076ea4c5b48}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{History of Huawei in Timeline}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://populartimelines.com
+      \endverb
+      \verb{url}
+      \verb https://populartimelines.com
+      \endverb
+    \endentry
+    \entry{powertech-huawei-mwc}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1bcaf8baa22e7e7835fba980b94fe7e6}{%
+           family={{Power Technology}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{fullhash}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{fullhashraw}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{bibnamehash}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{authorbibnamehash}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{authornamehash}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{authorfullhash}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \strng{authorfullhashraw}{1bcaf8baa22e7e7835fba980b94fe7e6}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Huawei announces initiatives to unlock potential of 5G-A and AI during MWC Barcelona}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.power-technology.com
+      \endverb
+      \verb{url}
+      \verb https://www.power-technology.com
+      \endverb
+    \endentry
+    \entry{rcr-huawei-5ga}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d36391faaddfc1f19ddf571bf7cdc821}{%
+           family={{RCR Wireless}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{fullhash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{fullhashraw}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{bibnamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorbibnamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authornamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorfullhash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorfullhashraw}{d36391faaddfc1f19ddf571bf7cdc821}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Huawei claims first commercial 5G-A version based on Rel. 18}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.rcrwireless.com
+      \endverb
+      \verb{url}
+      \verb https://www.rcrwireless.com
+      \endverb
+    \endentry
+    \entry{rcr-patent-revenue}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d36391faaddfc1f19ddf571bf7cdc821}{%
+           family={{RCR Wireless}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{fullhash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{fullhashraw}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{bibnamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorbibnamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authornamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorfullhash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorfullhashraw}{d36391faaddfc1f19ddf571bf7cdc821}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Huawei reports \$630 million in patent revenue}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.rcrwireless.com
+      \endverb
+      \verb{url}
+      \verb https://www.rcrwireless.com
+      \endverb
+    \endentry
+    \entry{rcr-patent-revenue-2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d36391faaddfc1f19ddf571bf7cdc821}{%
+           family={{RCR Wireless}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{fullhash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{fullhashraw}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{bibnamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorbibnamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authornamehash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorfullhash}{d36391faaddfc1f19ddf571bf7cdc821}
+      \strng{authorfullhashraw}{d36391faaddfc1f19ddf571bf7cdc821}
+      \field{extraname}{3}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Huawei reports \$630 million in patent revenue}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.rcrwireless.com
+      \endverb
+      \verb{url}
+      \verb https://www.rcrwireless.com
+      \endverb
+    \endentry
+    \entry{revelio-labs-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=87747c93845d0afe10f9b70d1849be40}{%
+           family={{Revelio Labs}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{87747c93845d0afe10f9b70d1849be40}
+      \strng{fullhash}{87747c93845d0afe10f9b70d1849be40}
+      \strng{fullhashraw}{87747c93845d0afe10f9b70d1849be40}
+      \strng{bibnamehash}{87747c93845d0afe10f9b70d1849be40}
+      \strng{authorbibnamehash}{87747c93845d0afe10f9b70d1849be40}
+      \strng{authornamehash}{87747c93845d0afe10f9b70d1849be40}
+      \strng{authorfullhash}{87747c93845d0afe10f9b70d1849be40}
+      \strng{authorfullhashraw}{87747c93845d0afe10f9b70d1849be40}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Huawei Technologies Research \& Development (UK) Ltd. Employee Count}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.reveliolabs.com
+      \endverb
+      \verb{url}
+      \verb https://www.reveliolabs.com
+      \endverb
+    \endentry
+    \entry{samena-huawei-rankings}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=51016c0b09691d3245c9deeabd18a538}{%
+           family={{SAMENA Council}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{51016c0b09691d3245c9deeabd18a538}
+      \strng{fullhash}{51016c0b09691d3245c9deeabd18a538}
+      \strng{fullhashraw}{51016c0b09691d3245c9deeabd18a538}
+      \strng{bibnamehash}{51016c0b09691d3245c9deeabd18a538}
+      \strng{authorbibnamehash}{51016c0b09691d3245c9deeabd18a538}
+      \strng{authornamehash}{51016c0b09691d3245c9deeabd18a538}
+      \strng{authorfullhash}{51016c0b09691d3245c9deeabd18a538}
+      \strng{authorfullhashraw}{51016c0b09691d3245c9deeabd18a538}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Huawei climbs rankings on The Fortune Global 500}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.samenacouncil.org
+      \endverb
+      \verb{url}
+      \verb https://www.samenacouncil.org
+      \endverb
+    \endentry
+    \entry{scmp-huawei-diversify}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ade27c832fa6768a59a4eac517b2d588}{%
+           family={{SCMP}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{fullhash}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{fullhashraw}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{bibnamehash}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{authorbibnamehash}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{authornamehash}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{authorfullhash}{ade27c832fa6768a59a4eac517b2d588}
+      \strng{authorfullhashraw}{ade27c832fa6768a59a4eac517b2d588}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Huawei diversifies business with new focus on ports, data centres, highways, solar industry amid stifling US sanctions}
+      \field{year}{2021}
+      \true{nocite}
+    \endentry
+    \entry{secci-governance}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=fa44717dbc06aa465a6344ba174c3e99}{%
+           family={Secci},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {LinkedIn}%
+      }
+      \strng{namehash}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{fullhash}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{fullhashraw}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{bibnamehash}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{authorbibnamehash}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{authornamehash}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{authorfullhash}{fa44717dbc06aa465a6344ba174c3e99}
+      \strng{authorfullhashraw}{fa44717dbc06aa465a6344ba174c3e99}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Huawei's Rotating Chair is not symbolism – governance system for risk control}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{shen2023hccl}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b805283de332f1b32f3b33d3c957d9c4}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Xiaofei},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8738de3a82585919dee74040c245c6a}
+      \strng{fullhash}{c8738de3a82585919dee74040c245c6a}
+      \strng{fullhashraw}{c8738de3a82585919dee74040c245c6a}
+      \strng{bibnamehash}{c8738de3a82585919dee74040c245c6a}
+      \strng{authorbibnamehash}{c8738de3a82585919dee74040c245c6a}
+      \strng{authornamehash}{c8738de3a82585919dee74040c245c6a}
+      \strng{authorfullhash}{c8738de3a82585919dee74040c245c6a}
+      \strng{authorfullhashraw}{c8738de3a82585919dee74040c245c6a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{{HCCL}: A High-Performance Collective Communication Library for Distributed {AI} Training on Ascend Clusters}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2308.00000
+      \endverb
+    \endentry
+    \entry{sse-fortune-500}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5fc53fc8197865c63285f74b1e147013}{%
+           family={{SSE}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fc53fc8197865c63285f74b1e147013}
+      \strng{fullhash}{5fc53fc8197865c63285f74b1e147013}
+      \strng{fullhashraw}{5fc53fc8197865c63285f74b1e147013}
+      \strng{bibnamehash}{5fc53fc8197865c63285f74b1e147013}
+      \strng{authorbibnamehash}{5fc53fc8197865c63285f74b1e147013}
+      \strng{authornamehash}{5fc53fc8197865c63285f74b1e147013}
+      \strng{authorfullhash}{5fc53fc8197865c63285f74b1e147013}
+      \strng{authorfullhashraw}{5fc53fc8197865c63285f74b1e147013}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{130 Chinese companies enter 2025 Fortune Global 500 list}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://english.sse.com.cn
+      \endverb
+      \verb{url}
+      \verb https://english.sse.com.cn
+      \endverb
+    \endentry
+    \entry{studocu-huawei-org}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5847b0c86a06d5ff14abd5e59dbc592d}{%
+           family={{Studocu}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{fullhash}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{fullhashraw}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{bibnamehash}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{authorbibnamehash}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{authornamehash}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{authorfullhash}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \strng{authorfullhashraw}{5847b0c86a06d5ff14abd5e59dbc592d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Huawei's Organizational Structure – Final Report Analysis}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.studocu.com
+      \endverb
+      \verb{url}
+      \verb https://www.studocu.com
+      \endverb
+    \endentry
+    \entry{tahawul-tech-strategy}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bbd023a52b4da4a6ce5ba04dd4ac891a}{%
+           family={{Tahawul Tech}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{fullhash}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{fullhashraw}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{bibnamehash}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{authorbibnamehash}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{authornamehash}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{authorfullhash}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \strng{authorfullhashraw}{bbd023a52b4da4a6ce5ba04dd4ac891a}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Innovation remains a long-term strategy for Huawei}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.tahawultech.com
+      \endverb
+      \verb{url}
+      \verb https://www.tahawultech.com
+      \endverb
+    \endentry
+    \entry{tavares-5g-patents}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1445e60a59bda75a906e54de8ca955b9}{%
+           family={{Tavares Office}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{fullhash}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{fullhashraw}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{bibnamehash}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{authorbibnamehash}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{authornamehash}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{authorfullhash}{1445e60a59bda75a906e54de8ca955b9}
+      \strng{authorfullhashraw}{1445e60a59bda75a906e54de8ca955b9}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Huawei leads the ranking of 5G patents, surpassing Qualcomm and Samsung}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://tavaresoffice.com.br
+      \endverb
+      \verb{url}
+      \verb https://tavaresoffice.com.br
+      \endverb
+    \endentry
+    \entry{tech-africa-rd}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8c559209376da17251bf33114d2b9a74}{%
+           family={{Tech African News}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c559209376da17251bf33114d2b9a74}
+      \strng{fullhash}{8c559209376da17251bf33114d2b9a74}
+      \strng{fullhashraw}{8c559209376da17251bf33114d2b9a74}
+      \strng{bibnamehash}{8c559209376da17251bf33114d2b9a74}
+      \strng{authorbibnamehash}{8c559209376da17251bf33114d2b9a74}
+      \strng{authornamehash}{8c559209376da17251bf33114d2b9a74}
+      \strng{authorfullhash}{8c559209376da17251bf33114d2b9a74}
+      \strng{authorfullhashraw}{8c559209376da17251bf33114d2b9a74}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Huawei Invests \$27.5bn in R\&D in 2025, Accounting for 21.8\% of Revenue}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://techafricanews.com
+      \endverb
+      \verb{url}
+      \verb https://techafricanews.com
+      \endverb
+    \endentry
+    \entry{et-huawei-5g-transfer}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=45d73469123888a825655dbfbece3c23}{%
+           family={{Telecom Economic Times India}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{45d73469123888a825655dbfbece3c23}
+      \strng{fullhash}{45d73469123888a825655dbfbece3c23}
+      \strng{fullhashraw}{45d73469123888a825655dbfbece3c23}
+      \strng{bibnamehash}{45d73469123888a825655dbfbece3c23}
+      \strng{authorbibnamehash}{45d73469123888a825655dbfbece3c23}
+      \strng{authornamehash}{45d73469123888a825655dbfbece3c23}
+      \strng{authorfullhash}{45d73469123888a825655dbfbece3c23}
+      \strng{authorfullhashraw}{45d73469123888a825655dbfbece3c23}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{Huawei open to transfer 5G technology for global innovation including source code}
+      \field{year}{2021}
+      \true{nocite}
+    \endentry
+    \entry{thompson2021computationallimits}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8127cb72444c8d7f950ec61d2e145025}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Neil\bibnamedelima C.},
+           giveni={N\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3db6dc969093252d098e15f40d93a859}
+      \strng{fullhash}{3db6dc969093252d098e15f40d93a859}
+      \strng{fullhashraw}{3db6dc969093252d098e15f40d93a859}
+      \strng{bibnamehash}{3db6dc969093252d098e15f40d93a859}
+      \strng{authorbibnamehash}{3db6dc969093252d098e15f40d93a859}
+      \strng{authornamehash}{3db6dc969093252d098e15f40d93a859}
+      \strng{authorfullhash}{3db6dc969093252d098e15f40d93a859}
+      \strng{authorfullhashraw}{3db6dc969093252d098e15f40d93a859}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{The Computational Limits of Deep Learning}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{eprint}
+      \verb 2007.05558
+      \endverb
+    \endentry
+    \entry{spring-boot-docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7a796ff4c0184c998b95c52c307a5723}{%
+           family={{VMware Tanzu}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{fullhash}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{fullhashraw}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{bibnamehash}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{authorbibnamehash}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{authornamehash}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{authorfullhash}{7a796ff4c0184c998b95c52c307a5723}
+      \strng{authorfullhashraw}{7a796ff4c0184c998b95c52c307a5723}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spring Boot Reference Documentation}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
+      \endverb
+      \verb{url}
+      \verb https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
+      \endverb
+    \endentry
+    \entry{wearetech-morocco}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7538ca2d6898bc1597a019cc387d3a43}{%
+           family={{We Are Tech Africa}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{fullhash}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{fullhashraw}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{bibnamehash}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{authorbibnamehash}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{authornamehash}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{authorfullhash}{7538ca2d6898bc1597a019cc387d3a43}
+      \strng{authorfullhashraw}{7538ca2d6898bc1597a019cc387d3a43}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Morocco Signs Key Agreements with Huawei to Promote Digital Transition}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.wearetech.africa
+      \endverb
+      \verb{url}
+      \verb https://www.wearetech.africa
+      \endverb
+    \endentry
+    \entry{wikipedia-maroc-telecom}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={{Wikipedia}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Maroc Telecom}
+      \field{year}{2006}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Maroc_Telecom
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Maroc_Telecom
+      \endverb
+    \endentry
+    \entry{huawei-wiki}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={{Wikipedia}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Huawei}
+      \field{urlday}{1}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://simple.wikipedia.org/wiki/Huawei
+      \endverb
+      \verb{url}
+      \verb https://simple.wikipedia.org/wiki/Huawei
+      \endverb
+    \endentry
+    \entry{wikipedia-huawei}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={{Wikipedia}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Huawei}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Huawei
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Huawei
+      \endverb
+    \endentry
+    \entry{wikipedia-pura}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={{Wikipedia}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Huawei Pura}
+      \field{year}{2026}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Huawei_Pura
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Huawei_Pura
+      \endverb
+    \endentry
+    \entry{huawei-910-launch}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=cf53261d890a23ee44a589c85b0c2d84}{%
+           family={{Xinhua}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{fullhash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{fullhashraw}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{bibnamehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authorbibnamehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authornamehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authorfullhash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authorfullhashraw}{cf53261d890a23ee44a589c85b0c2d84}
+      \field{extraname}{1}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Huawei launches powerful AI processor Ascend 910}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://www.xinhuanet.com/english/2019-08/23/c_138332324.htm
+      \endverb
+      \verb{url}
+      \verb http://www.xinhuanet.com/english/2019-08/23/c_138332324.htm
+      \endverb
+    \endentry
+    \entry{xinhuanet-ascend910}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=cf53261d890a23ee44a589c85b0c2d84}{%
+           family={{Xinhua}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{fullhash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{fullhashraw}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{bibnamehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authorbibnamehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authornamehash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authorfullhash}{cf53261d890a23ee44a589c85b0c2d84}
+      \strng{authorfullhashraw}{cf53261d890a23ee44a589c85b0c2d84}
+      \field{extraname}{2}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Huawei launches powerful AI processor Ascend 910}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://www.xinhuanet.com/english/2019-08/23/c_138332324.htm
+      \endverb
+      \verb{url}
+      \verb http://www.xinhuanet.com/english/2019-08/23/c_138332324.htm
+      \endverb
+    \endentry
+    \entry{yicai-rotating-chair}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=832aae7b80e2bb343b9018f4311c6740}{%
+           family={{Yicai Global}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{fullhash}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{fullhashraw}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{bibnamehash}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{authorbibnamehash}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{authornamehash}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{authorfullhash}{832aae7b80e2bb343b9018f4311c6740}
+      \strng{authorfullhashraw}{832aae7b80e2bb343b9018f4311c6740}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Huawei switches to rotating chairman system with Ren Zhengfei remaining CEO}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.yicaiglobal.com
+      \endverb
+      \verb{url}
+      \verb https://www.yicaiglobal.com
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

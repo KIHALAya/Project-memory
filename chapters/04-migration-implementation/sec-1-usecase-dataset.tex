@@ -1,0 +1,125 @@
+% ============================================================
+%  sec-1-usecase-dataset.tex  —  4.1 Use Case, Dataset, and
+%  Project Structure
+% ============================================================
+
+\section{Use Case Definition and Dataset Construction}
+\label{sec:usecase-dataset}
+
+
+The migration target for this project is a concrete, industrially
+grounded use case: a \term{Multilingual Technical Support Assistant}
+for \acrshort{mena} Telecom Infrastructure. The system is designed
+to assist enterprise clients of \CompanyName{} — telecom operators,
+\acrshort{isp}s, and enterprise \acrshort{it} teams — in resolving
+technical issues related to 5G infrastructure, Huawei network
+equipment, optical transport networks, and enterprise \acrshort{it}
+systems. Supported languages are English, Arabic, and French,
+reflecting the linguistic profile of \CompanyName{}'s Northern Africa
+customer base.
+
+This use case was selected for three concrete reasons. First, Nemotron
+3 Nano's native multilingual support (15+ languages) and 1M-token
+context window align directly with the requirements of multi-document
+technical queries and multi-turn support conversations. Second, the
+3.6B active parameter count fits within the 64~GB \acrshort{hbm2}
+of a single Ascend 910C, enabling single-node inference without
+tensor parallelism. Third, the domain-specificity of technical support
+provides clear, measurable evaluation criteria — keyword coverage,
+command correctness, and language accuracy — rather than the
+subjective metrics of general-purpose assistants.
+
+The use case positions the fine-tuned model as the intelligence layer
+of a production support platform, with the inference server exposing
+an OpenAI-compatible \acrshort{rest} \acrshort{api} that can be
+integrated into ticketing systems, chat interfaces, and
+\acrshort{cli} tooling without modification.
+
+\subsection{Dataset Blend}
+\label{subsec:dataset}
+
+The \acrshort{sft} dataset is constructed from four publicly
+available HuggingFace datasets, blended by weight to reflect the
+target language and domain distribution. \tabref{dataset-blend}
+documents each source.
+
+\begin{table}[htbp]
+  \centering
+  \caption{SFT dataset blend for the telecom support use case}
+  \label{tab:dataset-blend}
+  \begin{tabularx}{\textwidth}{P{3.5cm} L c P{2cm} r}
+    \toprule
+    \tableheader{Dataset & HuggingFace Path & Lang. & Size & Weight} \\
+    \midrule
+    Salesforce DialogStudio
+      & \texttt{Salesforce/dialogstudio}
+      & EN & $\sim$50K & 0.40 \\
+    \rowcolor{TableRowOdd}
+    Arabic Alpaca
+      & \texttt{kunishou/ArabicAlpaca}
+      & AR & $\sim$52K & 0.30 \\
+    Open-Platypus
+      & \texttt{garage-bAInd/Open-Platypus}
+      & EN/FR & $\sim$25K & 0.20 \\
+    \rowcolor{TableRowOdd}
+    OPUS-100 (fr-ar)
+      & \texttt{Helsinki-NLP/opus-100}
+      & FR/AR & $\sim$10K & 0.10 \\
+    \midrule
+    \textbf{Total}
+      & & & $\sim$137K & 1.00 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Each dataset undergoes a distinct formatting transformation
+implemented in \filepath{data/prepare\_datasets.py}. The
+\textbf{DialogStudio TechSupport} split contains multi-turn
+technical support conversations in OpenAI dialog format; each
+dialog is parsed by iterating over \texttt{roles} fields and
+mapping \texttt{USR} tokens to \texttt{user} turns and \texttt{SYS}
+tokens to \texttt{assistant} turns. The \textbf{Arabic Alpaca}
+dataset uses an instruction-input-output structure; the
+\texttt{instruction} and optional \texttt{input} fields are
+concatenated into the \texttt{user} turn, and the \texttt{output}
+becomes the \texttt{assistant} turn. The \textbf{Open-Platypus}
+dataset is filtered to retain only samples containing technical
+keywords (network, protocol, server, system, réseau, etc.) before
+formatting. The \textbf{OPUS-100 fr-ar} translation pairs are
+converted into synthetic bilingual QA samples where a French
+technical sentence becomes the user query and the Arabic translation
+becomes the assistant response, filtered to retain only
+telecom-relevant vocabulary.
+
+All samples are formatted to a unified OpenAI chat \acrshort{json}
+schema with system, user, and assistant roles, as described in
+Chapter 3.
+
+Three language-specific system prompts are defined in
+\filepath{data/prepare\_datasets.py} and injected based on
+dataset source:
+
+\begin{itemize}
+  \item \texttt{SYSTEM\_PROMPT\_EN} — English prompt positioning the
+        model as a Huawei telecom support specialist
+  \item \texttt{SYSTEM\_PROMPT\_AR} — Arabic prompt with equivalent
+        framing in \acrshort{msa}
+  \item \texttt{SYSTEM\_PROMPT\_FR} — French prompt for
+        French-language client interactions
+\end{itemize}
+
+During inference, the server automatically detects the language of
+the incoming user query (via Unicode Arabic character ratio and
+French lexical markers) and injects the appropriate system prompt,
+ensuring consistent role framing without requiring the client
+application to supply a system prompt.
+
+\subsection{Dataset Preparation Pipeline}
+\label{sec:data-prep-pipeline}
+
+The dataset preparation executes in two stages. In the first stage, raw
+datasets are downloaded and formatted to \texttt{.jsonl} using
+\filepath{data/prepare\_datasets.py}.
+
+The second stage runs the Nemotron SFT data pipeline on the formatted
+files to apply the chat template and produce packed Parquet shards.

@@ -1,0 +1,149 @@
+% ============================================================
+%  sec-5-project-motivation.tex  —  1.5 Project Motivation
+% ============================================================
+
+\section{Project Motivation}
+\label{sec:project-motivation}
+
+The proliferation of generative AI and large-scale machine learning workloads
+has fundamentally transformed modern computing infrastructure. Organisations
+worldwide are investing heavily in AI-capable data centres, yet the prevailing
+reliance on \acrshort{gpu}-dominated infrastructures has revealed critical
+limitations in cost, energy efficiency, supply chain resilience, and strategic
+autonomy. This project addresses the urgent industrial need for structured
+methodologies to evaluate, guide, and optimise the migration from GPU-centric
+architectures toward \acrshort{npu}-based alternatives.
+
+% ── 1.5.1 ────────────────────────────────────────────────────
+\subsection{Need for GPU\texorpdfstring{$\,\to\,$}{-to-}NPU Migration Guidance}
+\label{subsec:migration-need}
+
+Since the advent of deep learning, \acrfull{gpu}s have established themselves
+as the de facto hardware foundation for AI workloads, with the market projected
+to reach USD 228.04B by 2030.
+
+\subsubsection{Structural Limitations Driving Migration}
+
+Despite this dominance, the GPU-centric paradigm is increasingly
+unsustainable. \tabref{gpu-limitations} summarises the five structural
+limitations that motivate the exploration of NPU-based alternatives.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Structural limitations of GPU-centric AI infrastructure}
+  \label{tab:gpu-limitations}
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \tableheader{Limitation & Key Evidence} \\
+    \midrule
+    Energy consumption
+      & A single GB200 NVL72 rack draws 120–132 kW vs.\ 10–15 kW for a typical
+        enterprise rack; AI's energy needs projected at 21\% of global
+        electricity by 2030. \\
+    \rowcolor{TableRowOdd}
+    Infrastructure cost
+      & Data centre construction costs rose from \$7.7M to \$10.7M per MW
+        between 2020 and 2025 (7\% CAGR). \\
+    Vendor lock-in
+      & CUDA's dominance creates prohibitive migration barriers; multi-year supply
+        agreements between NVIDIA and hyperscalers crowd out enterprise buyers. \\
+    \rowcolor{TableRowOdd}
+    Scalability for mid-size enterprises
+      & Four GB200 racks require $\approx$0.5 MW of dedicated power plus
+        liquid cooling infrastructure unavailable in most enterprise data centres. \\
+    Supply chain constraints
+      & GPU delivery windows stretch 36–52 weeks; Blackwell-class hardware
+        delayed to Q1 2027; NVIDIA consumes $\approx$60\% of CoWoS packaging
+        capacity. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+NPUs address these limitations through domain-specific architectures.
+Recent benchmarks show NPUs delivering 30–63\% higher energy efficiency than
+NVIDIA GPUs in quantised \acrshort{llm} inference, while operating at
+10–30W per chip compared to 300–700W for data centre GPUs.
+
+\subsubsection{Enterprise Migration Challenges}
+
+Despite the promise of NPUs, enterprises face significant migration barriers:
+GPU-oriented ecosystems, unclear migration paths, limited NPU expertise, and
+workload heterogeneity (training vs.\ inference, latency vs.\ throughput, cloud
+vs.\ edge). The absence of structured guidance creates a systematic gap between
+the theoretical advantages of NPU adoption and practical deployment capability.
+This project directly addresses this gap.
+
+% ── 1.5.2 ────────────────────────────────────────────────────
+\subsection{Need for Compatibility Analysis}
+\label{subsec:compatibility-need}
+
+Compatibility analysis is a critical technical prerequisite during AI hardware
+transitions. The shift from GPU to NPU is not merely a hardware substitution
+but a fundamental reconfiguration of the entire software-hardware stack. A 2025
+industry analysis found that 68\% of production AI workloads contain at least
+one CUDA-dependent component requiring manual reimplementation for NPU
+deployment, rising to 85\% for workloads using custom architectures.
+
+\subsubsection{Software Compatibility Dimensions}
+
+\begin{table}[htbp]
+  \centering
+  \caption{AI framework compatibility status across hardware backends}
+  \label{tab:framework-compat}
+  \begin{tabularx}{\textwidth}{llXl}
+    \toprule
+    \tableheader{Framework & Primary Backend & NPU Support Status & Migration Complexity} \\
+    \midrule
+    PyTorch      & CUDA (NVIDIA)    & Limited (requires CANN/MindSpore adaptation) & High \\
+    \rowcolor{TableRowOdd}
+    TensorFlow   & CUDA (NVIDIA)    & Partial (via Ascend TF plugin)               & Medium-High \\
+    MindSpore    & Ascend NPU       & Native                                       & Low \\
+    \rowcolor{TableRowOdd}
+    ONNX Runtime & Multi-arch       & Moderate (provider-dependent)                & Medium \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+CUDA creates dependency at multiple abstraction levels simultaneously:
+custom CUDA kernels, cuDNN/cuBLAS libraries, profiling tools (Nsight), and
+model checkpoint formats with CUDA-specific metadata. Each layer must be
+validated independently during migration.
+
+\subsubsection{Impact of Compatibility Problems}
+
+Compatibility failures affect four dimensions of deployment success.
+\textbf{Feasibility}: severe incompatibilities can render deployment impossible
+without prohibitive re-engineering — cases include models with proprietary
+CUDA kernels and framework versions incompatible with NPU drivers.
+\textbf{Performance}: suboptimal operator implementations may reduce throughput
+by 30–50\% and increase latency through memory layout mismatches.
+\textbf{Maintenance complexity}: organisations maintaining both GPU and NPU
+infrastructure must support two complete, evolving software stacks.
+\textbf{Cost}: industry estimates suggest 40–60\% of total migration cost
+arises from software compatibility resolution, not hardware procurement.
+
+Such migrations require not only code changes but framework-level retraining,
+model checkpoint conversion, and accuracy validation — illustrating the need
+for systematic compatibility analysis methodologies.
+
+% ── 1.5.3 ────────────────────────────────────────────────────
+\subsection{Need for Hardware Transition Evaluation}
+\label{subsec:evaluation-need}
+
+Hardware transition decisions represent multi-year infrastructure commitments
+that shape organisational AI capabilities. Systematic evaluation must span
+five complementary dimensions.
+
+\subsubsection{Performance Benchmarking}
+
+GPU and NPU performance profiles differ fundamentally across workload types.
+For inference at batch size 1, NPUs can achieve 3–10$\times$ lower latency
+than GPUs. For large-scale training, GPUs remain significantly superior.
+Benchmarks must be conducted under realistic production conditions — including
+data pipeline overhead, network latency, and memory contention — not idealised
+laboratory settings.
+
+This project addresses the need for systematic methodologies, enabling
+organisations to make data-driven infrastructure decisions based on
+comprehensive technical and economic assessment rather than incomplete
+information or vendor marketing claims.

@@ -1,0 +1,109 @@
+% ============================================================
+%  styles/listings.tex
+%  Code listing styles for both `listings` and `minted`
+% ============================================================
+
+% ── LISTINGS PACKAGE GLOBAL DEFAULTS ────────────────────────
+\lstset{
+  backgroundcolor  = \color{CodeBg},
+  basicstyle       = \ttfamily\small\color{BodyText},
+  keywordstyle     = \color{CodeKeyword}\bfseries,
+  commentstyle     = \color{CodeComment}\itshape,
+  stringstyle      = \color{CodeString},
+  numberstyle      = \tiny\color{MidGray},
+  breakatwhitespace= false,
+  breaklines       = true,
+  captionpos       = b,
+  frame            = single,
+  framerule        = 0.4pt,
+  rulecolor        = \color{CodeBorder},
+  keepspaces       = true,
+  numbers          = left,
+  numbersep        = 10pt,
+  showspaces       = false,
+  showstringspaces = false,
+  showtabs         = false,
+  tabsize          = 2,
+  xleftmargin      = 15pt,
+  framexleftmargin = 15pt,
+  aboveskip        = 12pt,
+  belowskip        = 12pt,
+  literate         = {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1
+                     {ó}{{\'o}}1 {ú}{{\'u}}1
+}
+
+% Language-specific styles
+\lstdefinestyle{Python}{
+  language    = Python,
+  morekeywords= {self, True, False, None, async, await, yield}
+}
+
+\lstdefinestyle{Java}{
+  language    = Java,
+  morekeywords= {var, record, sealed, permits}
+}
+
+\lstdefinestyle{JavaScript}{
+  language    = Java,    % closest built-in
+  morekeywords= {const, let, async, await, of, from, import, export,
+                 function, class, extends, new, return, typeof,
+                 undefined, null, true, false, =>}
+}
+
+\lstdefinestyle{Bash}{
+  language    = bash,
+  morekeywords= {docker, kubectl, git, npm, pip, make}
+}
+
+\lstdefinestyle{YAML}{
+  language    = python,  % closest built-in for YAML
+  morekeywords= {true, false, null},
+  literate    = {:}{{{\textcolor{CodeKeyword}{:}}}}{1}
+}
+
+\lstdefinestyle{SQL}{
+  language    = SQL,
+  morekeywords= {CREATE, ALTER, DROP, INSERT, UPDATE, DELETE,
+                 SELECT, FROM, WHERE, JOIN, INNER, OUTER,
+                 LEFT, RIGHT, ON, GROUP, ORDER, BY, HAVING}
+}
+
+% ── MINTED (preferred when --shell-escape is available) ──────
+% Usage: \begin{minted}[options]{language} ... \end{minted}
+% Or: \mintinline{python}{for x in range(10):}
+% Or: \inputminted{python}{code/example.py}
+
+% Default minted style
+\setminted{
+  style        = friendly,
+  bgcolor      = CodeBg,
+  fontsize     = \small,
+  linenos      = true,
+  numbersep    = 8pt,
+  frame        = lines,
+  framesep     = 2mm,
+  breaklines   = true,
+  autogobble   = true,
+  tabsize      = 2
+}
+
+% ── CUSTOM LISTINGS ENVIRONMENT ──────────────────────────────
+% \begin{codebox}[Python]{My Python example}{lst:example}
+% ... code ...
+% \end{codebox}
+\NewDocumentEnvironment{codebox}{ O{} m m }{%
+  \begin{tcolorbox}[
+    listing only,
+    title   = \texttt{#2},
+    label   = #3,
+    colback = CodeBg,
+    colframe= PrimaryBlue,
+    coltitle= white,
+    fonttitle=\bfseries\small\ttfamily,
+    breakable,
+    left=0pt, right=0pt, top=0pt, bottom=0pt
+  ]
+  \lstset{style=#1}%
+}{%
+  \end{tcolorbox}%
+}

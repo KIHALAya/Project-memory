@@ -1,0 +1,117 @@
+% ============================================================
+%  sec-4-consolidated-architecture.tex  —  3.4 Consolidated Architecture
+% ============================================================
+
+\section{Consolidated Nemotron 3 Nano Architecture}
+\label{sec:consolidated-architecture}
+
+% ── 3.4.1 ────────────────────────────────────────────────────
+\subsection{End-to-End Architecture Description}
+\label{subsec:e2e-architecture}
+
+The Nemotron 3 Nano training and deployment system constitutes a
+vertically integrated NVIDIA-stack pipeline spanning data ingestion,
+distributed training, alignment, evaluation, and production inference.
+The architecture is characterised by three structural properties.
+
+\textbf{Stage isolation with artifact-mediated handoff.} Each stage
+is an independently deployable unit communicating exclusively through
+W\&B artifacts.
+\textbf{Framework heterogeneity across stages.} The pipeline uses
+Megatron-Bridge, NeMo-RL, and cosmos\_xenna to address different
+training semantics.
+\textbf{Configuration-driven architecture selection.} The recipe system
+enables swapping model architectures via a single configuration field
+with no code changes.
+
+% ── 3.4.2 ────────────────────────────────────────────────────
+\subsection{Training Infrastructure Summary}
+\label{subsec:training-infra-summary}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Training infrastructure summary by stage}
+  \label{tab:training-summary}
+  \begin{tabularx}{\textwidth}{>{\hsize=0.6\hsize}L >{\hsize=1.2\hsize}L l l l >{\hsize=1.4\hsize}L}
+    \toprule
+    \tableheader{Stage & Framework & Launch & Nodes & GPUs & Container} \\
+    \midrule
+    Data Prep
+      & cosmos\_xenna + Ray
+      & ray
+      & 1
+      & 0
+      & \path{anyscale/ray:2.49.2-py312} \\
+    \rowcolor{TableRowOdd}
+    Pretrain
+      & Megatron-Bridge
+      & torchrun
+      & 2
+      & 8/node
+      & \path{nemo:25.11.nemotron_3_nano} \\
+    SFT
+      & Megatron-Bridge
+      & torchrun
+      & 1
+      & 8/node
+      & \path{nemo:26.02.super.rc1} \\
+    \rowcolor{TableRowOdd}
+    RL (GRPO)
+      & NeMo-RL + Ray
+      & ray
+      & 1
+      & 8/node
+      & \path{nemo-rl:v0.4.0.nemotron_3_nano} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ── 3.4.3 ────────────────────────────────────────────────────
+\subsection{Inference Infrastructure and Dependency Summary}
+\label{subsec:inference-summary}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Inference infrastructure options}
+  \label{tab:inference-summary}
+  \begin{tabularx}{\textwidth}{>{\hsize=0.6\hsize}L >{\hsize=1.4\hsize}L >{\hsize=1.0\hsize}L}
+    \toprule
+    \tableheader{Engine & Integration Point & Deployment Context} \\
+    \midrule
+    vLLM
+      & RL generation backend (\texttt{policy\_generation} actor); standalone serving
+      & Research and production serving \\
+    \rowcolor{TableRowOdd}
+    TensorRT-LLM
+      & Post-training compilation of final checkpoint
+      & Optimised production inference \\
+    NVIDIA NIM
+      & Containerised packaging of TRT-LLM engine
+      & Enterprise deployment; OpenAI-compatible API \\
+    \rowcolor{TableRowOdd}
+    NeMo Evaluator
+      & Benchmark inference during Stage 3 evaluation
+      & Accuracy measurement before deployment \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+
+% ── 3.4.5 ────────────────────────────────────────────────────
+\subsection{Concluding Remarks}
+\label{subsec:ch3-conclusion}
+
+The Nemotron 3 Nano ecosystem implements a complete, production-grade
+LLM lifecycle spanning pretraining, supervised fine-tuning, reinforcement
+learning alignment, evaluation, and deployment. Each stage is implemented
+as a discrete, independently executable unit communicating through typed
+W\&B artifacts. The training stack is exclusively NVIDIA-native: every
+GPU-accelerated stage depends on \acrshort{cuda}, cuDNN, NCCL, or
+TensorRT-LLM with no hardware-agnostic abstraction layer between the
+framework code and NVIDIA's accelerator stack. The data preparation
+pipeline, operating on CPU-only Ray nodes, is the sole stage with no
+direct \acrshort{cuda} dependency.
+
+This architecture constitutes the reference NVIDIA-based ecosystem that
+will be analysed and used as the baseline for the migration study
+presented in the next chapter.

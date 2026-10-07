@@ -1,0 +1,127 @@
+% ============================================================
+%  sec-3-operator-migration.tex  —  4.3 Operator Migration
+% ============================================================
+
+\section{Critical Operator Migration}
+\label{sec:operator-migration}
+
+The two most technically demanding components of the migration are
+the Mamba \acrshort{ssm} selective scan kernel and the \acrshort{moe}
+token dispatch kernel. Both are implemented as custom \acrshort{cuda}
+extensions in the original pipeline and have no pre-built \acrshort{cann}
+equivalent. This section documents the design and strategy for the
+Ascend-compatible replacements provided in \filepath{ops/mamba\_ascend.py}
+and \filepath{ops/moe\_routing\_ascend.py}.
+
+% ── 4.3.1 ────────────────────────────────────────────────────
+\subsection{Mamba SSM Selective Scan Operator}
+\label{sec:mamba-operator}
+
+\subsubsection{Original CUDA Implementation}
+
+In the Nemotron 3 Nano hybrid architecture, Mamba layers implement
+the selective state space recurrence via a hand-written \acrshort{cuda}
+kernel (\texttt{selective\_scan\_cuda}). This kernel implements a parallel
+prefix scan algorithm that computes the full recurrence across all
+$L$ timesteps in $O(\log L)$ depth, exploiting the associativity
+of the state update to parallelise across the sequence dimension.
+
+\subsubsection{CANN Incompatibility}
+
+The \texttt{selective\_scan\_cuda} kernel cannot execute on Ascend
+because it is compiled as a \acrshort{cuda} \acrshort{ptx} binary.
+Furthermore, the parallel prefix scan algorithm relies on CUDA warp
+shuffle instructions which have no direct equivalent in CANN's DaVinci
+instruction set.
+
+\subsubsection{PyTorch Fallback Implementation}
+
+The replacement in \filepath{ops/mamba\_ascend.py} provides two
+implementations: a sequential reference and an optimised chunked
+version. The sequential version implements the recurrence in a Python
+loop over timesteps, while the chunked implementation reduces Python
+overhead by processing the sequence in blocks of 256 tokens. The
+actual implementation code is provided in Appendix A.
+
+The chunked version is selected automatically when the environment
+variable \texttt{USE\_CHUNKED\_MAMBA=1} is set, which is the default
+in the Ascend cluster profile.
+
+\subsubsection{Kernel Injection Mechanism}
+
+The replacement is injected at process startup in
+\filepath{train\_sft\_ascend.py} by reassigning module-level function
+pointers in the \texttt{mamba\_ssm} package, ensuring all subsequent
+calls invoke the Ascend-compatible fallback.
+
+\subsubsection{Correctness Verification}
+
+The built-in self-test in \filepath{ops/mamba\_ascend.py} validates
+output shape correctness and numerical equivalence between the
+implementations. \tabref{mamba-perf} summarises the characteristics of
+all three implementations.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Mamba SSM implementation comparison}
+  \label{tab:mamba-perf}
+  \begin{tabularx}{\textwidth}{lXXX}
+    \toprule
+    \tableheader{Implementation & Correctness & Relative Speed & Device} \\
+    \midrule
+    \texttt{selective\_scan\_cuda}
+      & Reference (ground truth)
+      & 1.0$\times$ (baseline)
+      & CUDA only \\
+    \rowcolor{TableRowOdd}
+    \texttt{selective\_scan\_ascend}
+      & Matches CUDA (atol $<$ 1e-4)
+      & $\approx$0.2$\times$
+      & Any (CANN, CPU) \\
+    \texttt{selective\_scan\_chunked}
+      & Matches sequential (atol $<$ 1e-5)
+      & $\approx$0.5$\times$
+      & Any (CANN, CPU) \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ── 4.3.2 ────────────────────────────────────────────────────
+\subsection{MoE Token Dispatch Operator}
+\label{sec:moe-operator}
+
+\subsubsection{Original CUDA Implementation}
+
+Nemotron 3 Nano's sparse \acrshort{moe} layers activate 6 out of
+128 experts per token using fused \acrshort{cuda} kernels for
+routing weight computation and token dispatch (gathering/scattering).
+
+\subsubsection{PyTorch Fallback Implementation}
+
+The replacement in \filepath{ops/moe\_routing\_ascend.py} decomposes
+the dispatch into a routing weight computation and an expert execution
+loop. The implementation uses standard PyTorch operations to execute
+each expert \acrshort{ffn} on its assigned token subset. The complete
+source code is available in Appendix A.
+
+\subsubsection{Load Balancing Loss}
+
+The load balancing auxiliary loss from Switch Transformer prevents
+expert collapse during fine-tuning by penalising uneven token
+distribution across experts.
+
+\subsubsection{Megatron-Bridge Dispatcher Patch}
+
+The MoE dispatch replacement is injected into Megatron-Bridge's
+\texttt{MoETokenDispatcher} class via monkey-patching at process
+startup.
+
+% ── 4.3.3 ────────────────────────────────────────────────────
+\subsection{Autocast and Mixed-Precision Patch}
+\label{subsec:autocast-patch}
+
+Megatron-Bridge uses \texttt{torch.cuda.amp.autocast} for mixed
+precision training. On Ascend, this is replaced with an
+NPU-compatible wrapper in \filepath{train\_sft\_ascend.py} that
+redirects calls to \texttt{torch.npu.amp.autocast()}, ensuring
+correct FP16 acceleration on DaVinci Vector Units.

@@ -1,0 +1,69 @@
+% ============================================================
+%  sec-4-software-stack.tex  —  2.4 AI Software Tools,
+%  Frameworks and Infrastructure Stack
+% ============================================================
+
+\section{AI Software Tools, Frameworks, and Infrastructure Stack}
+\label{sec:software-stack}
+
+AI production systems are implemented as layered software stacks that
+separate model development, distributed training, optimisation,
+inference serving, orchestration, and infrastructure execution.
+In a \acrshort{gpu}-to-\acrshort{npu} migration context, this stack
+defines where model code remains portable and where vendor-specific
+components introduce conversion, optimisation, and runtime dependencies.
+
+The AI computing landscape is characterised by a fundamental asymmetry:
+while low-level infrastructure (Docker, Kubernetes) and MLOps tooling
+(W\&B, MLflow) are largely hardware-agnostic, the performance-critical
+layers of model development and compilation are tightly coupled to
+vendor-specific ecosystems. Table \ref{tab:full-stack} provides a mapping
+of equivalent tools across the NVIDIA and Huawei stacks and their
+portability.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Complete AI software and infrastructure stack portability overview}
+  \label{tab:full-stack}
+  \begin{tabularx}{\textwidth}{lXXl}
+    \toprule
+    \tableheader{Layer & NVIDIA Stack & Huawei Stack & Portability} \\
+    \midrule
+    Model dev.
+      & PyTorch, HF Transformers, Megatron, DeepSpeed
+      & MindSpore, MindFormers
+      & Low \\
+    \rowcolor{TableRowOdd}
+    Distributed training
+      & NCCL, DDP, FSDP
+      & HCCL, MindSpore dist.
+      & Medium \\
+    Optimisation
+      & TensorRT, TensorRT-LLM, CUDA Graphs
+      & CANN, ATC, ACL
+      & None \\
+    \rowcolor{TableRowOdd}
+    Inference serving
+      & vLLM, Triton, NIM
+      & MindSpore Serving, ModelArts
+      & Low \\
+    MLOps / tracking
+      & W\&B, MLflow, Slurm, Ray
+      & W\&B, MLflow, ModelArts
+      & High \\
+    \rowcolor{TableRowOdd}
+    Infrastructure
+      & Docker, Kubernetes, GitHub Actions
+      & Docker, Kubernetes, GitHub Actions
+      & Full \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+The infrastructure layer defines how AI workloads are executed across
+local, cloud, and cluster environments. Containerisation via Docker and
+orchestration via Slurm or Kubernetes ensure that the environment remains
+consistent, which is critical for preserving reproducibility during
+cross-hardware migration studies. Environment drift is a primary source
+of performance loss, making clean infrastructure abstraction a prerequisite
+for any successful migration project.

@@ -1,0 +1,40 @@
+# ── LaTeX generated files ────────────────────────────────────
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.lod
+*.lol
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.xdy
+
+# ── minted cache ─────────────────────────────────────────────
+_minted-*/
+
+# ── Editor files ─────────────────────────────────────────────
+.vscode/settings.json
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ── Keep the output PDF ──────────────────────────────────────
+!main.pdf

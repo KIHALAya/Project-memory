@@ -1,0 +1,40 @@
+% ============================================================
+%  styles/hyperref-setup.tex
+%  PDF metadata, hyperlinks, bookmarks
+%  Must be loaded AFTER most other packages
+% ============================================================
+
+\usepackage[
+  unicode,
+  pdfencoding  = auto,
+  colorlinks   = true,
+  linkcolor    = LinkColor,
+  citecolor    = CiteColor,
+  urlcolor     = UrlColor,
+  filecolor    = LinkColor,
+  menucolor    = LinkColor,
+  runcolor     = LinkColor,
+  bookmarks    = true,
+  bookmarksopen= true,
+  bookmarksnumbered = true,
+  pdfstartview = FitH,
+  pdfdisplaydoctitle = true,
+  pdfpagelayout= TwoPageRight,
+  pdfpagemode  = UseOutlines,
+  breaklinks   = true,
+  hidelinks    = false
+]{hyperref}
+
+\usepackage[nameinlink]{cleveref} % Must be loaded AFTER hyperref
+
+% Populate PDF metadata from metadata.tex values
+\AtBeginDocument{%
+  \hypersetup{
+    pdftitle    = {\PDFTitle},
+    pdfauthor   = {\PDFAuthor},
+    pdfsubject  = {\PDFSubject},
+    pdfkeywords = {\PDFKeywords},
+    pdfcreator  = {LuaLaTeX + biblatex + glossaries-extra},
+    pdfproducer = {LaTeX with hyperref}
+  }%
+}

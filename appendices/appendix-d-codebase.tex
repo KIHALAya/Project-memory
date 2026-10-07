@@ -1,0 +1,374 @@
+% ============================================================
+%  appendices/appendix-d-codebase.tex
+%  Appendix D — Migration Codebase Reference
+%  Full annotated listing of every file in the
+%  nemotron-ascend-lifecycle project
+% ============================================================
+
+\chapter{Migration Codebase Reference}
+\label{app:codebase}
+
+This appendix provides the complete annotated source listing for
+all files in the \texttt{nemotron-ascend-lifecycle} project
+described in Chapter~4. Files are presented in execution order:
+data preparation, operator implementations, training entry point,
+configuration, inference, and tooling.
+
+% ── D.1 ──────────────────────────────────────────────────────
+\section{Project File Inventory}
+\label{app:file-inventory}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Complete file inventory — \texttt{nemotron-ascend-lifecycle/}}
+  \label{tab:file-inventory}
+  \begin{tabularx}{\textwidth}{lXl}
+    \toprule
+    \tableheader{File & Purpose & Section} \\
+    \midrule
+    \texttt{env.toml}
+      & Slurm cluster profiles and W\&B configuration
+      & \secref{cluster-config} \\
+    \rowcolor{TableRowOdd}
+    \texttt{data/prepare\_datasets.py}
+      & Download, filter, and format four HF datasets to JSONL
+      & \secref{data-prep-pipeline} \\
+    \texttt{ops/mamba\_ascend.py}
+      & Mamba SSM selective scan — PyTorch fallback (sequential
+        and chunked)
+      & \secref{mamba-operator} \\
+    \rowcolor{TableRowOdd}
+    \texttt{ops/moe\_routing\_ascend.py}
+      & MoE token dispatch, load balancing loss, dispatcher patch
+      & \secref{moe-operator} \\
+    \texttt{train\_sft\_ascend.py}
+      & Patched SFT entry point — 6-step Ascend startup sequence
+      & \secref{train-entry-point} \\
+    \rowcolor{TableRowOdd}
+    \texttt{configs/sft\_ascend.yaml}
+      & Production SFT config — 8 NPUs, 3,400 iterations
+      & \secref{sft-config} \\
+    \texttt{configs/sft\_tiny.yaml}
+      & Test config — 1 NPU, 100 iterations
+      & \secref{test-config} \\
+    \rowcolor{TableRowOdd}
+    \texttt{inference/compile\_mindie.sh}
+      & MindIE compilation from HF checkpoint
+      & \secref{mindie-compilation} \\
+    \texttt{inference/serve.py}
+      & FastAPI inference server — MindIE/vLLM-Ascend backends
+      & \secref{inference-server} \\
+    \rowcolor{TableRowOdd}
+    \texttt{inference/client.py}
+      & Interactive client and test runner
+      & \secref{inference-server} \\
+    \texttt{inference/benchmark.py}
+      & Async latency and throughput benchmark
+      & \secref{perf-benchmark} \\
+    \rowcolor{TableRowOdd}
+    \texttt{tools/evaluate.py}
+      & Technical QA evaluation — ROUGE-L, keyword coverage
+      & \secref{qa-evaluation} \\
+    \texttt{tools/validate\_loss.py}
+      & W\&B loss curve comparison — CUDA vs.\ Ascend
+      & \secref{loss-validation} \\
+    \rowcolor{TableRowOdd}
+    \path{docker/Dockerfile.sft}
+      & SFT container — torch\_npu + Megatron-Bridge on Ascend
+      & \secref{container-strategy} \\
+    \path{docker/Dockerfile.inference}
+      & Inference container — MindIE serving
+      & \secref{container-strategy} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ── D.2 ──────────────────────────────────────────────────────
+\section{Dataset Formatters}
+\label{app:dataset-formatters}
+
+\tabref{formatter-mapping} documents how each raw dataset field
+maps to the OpenAI chat format used for \acrshort{sft}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Dataset field-to-chat-format mapping}
+  \label{tab:formatter-mapping}
+  \begin{tabularx}{\textwidth}{lXX}
+    \toprule
+    \tableheader{Dataset & Raw Fields & Chat Mapping} \\
+    \midrule
+    DialogStudio TechSupport
+      & \texttt{dialog[].roles}, \texttt{dialog[].content}
+      & \texttt{USR/USER} --\textgreater \texttt{user};
+        \texttt{SYS/BOT} --\textgreater \texttt{assistant} \\
+    \rowcolor{TableRowOdd}
+    Arabic Alpaca
+      & \texttt{instruction}, \texttt{input}, \texttt{output}
+      Arabic Alpaca
+        & \texttt{instruction + input} --\textgreater \texttt{user};
+          \texttt{output} --\textgreater \texttt{assistant} \\
+      Open-Platypus
+        & \texttt{instruction + input} --\textgreater \texttt{user};
+          \texttt{output} --\textgreater \texttt{assistant} \\
+      \rowcolor{TableRowOdd}
+      OPUS-100 fr-ar
+        & \texttt{fr} --\textgreater \texttt{user};
+          \texttt{ar} --\textgreater \texttt{assistant} \\
+      \bottomrule
+      \end{tabularx}
+      \end{table}
+
+      Quality filters applied per dataset:
+      \begin{itemize}
+      \item \textbf{DialogStudio}: minimum 2 turns; must have both
+          \texttt{user} and \texttt{assistant} roles; first non-system
+          turn must be \texttt{user}
+      \item \textbf{Arabic Alpaca}: output length at least 20 characters
+      \item \textbf{Open-Platypus}: at least one of 15 technical
+          keywords in combined instruction + output text
+      \item \textbf{OPUS-100}: French text at least 30 characters;
+          at least one telecom keyword in French text
+      \end{itemize}
+
+% ── D.3 ──────────────────────────────────────────────────────
+\section{Mamba SSM Technical Reference}
+\label{app:mamba-reference}
+
+The selective scan implements the input-dependent state recurrence 
+across all timesteps. It computes the discretized state transition 
+and input matrices before updating the hidden state and generating 
+the output sequence.
+
+\noindent Variable specifications for Nemotron 3 Nano:
+
+\begin{table}[htbp]
+  \centering
+  \caption{Mamba SSM tensor dimensions}
+  \label{tab:mamba-dims}
+  \begin{tabularx}{0.85\textwidth}{lXX}
+    \toprule
+    \tableheader{Variable & Shape & Description} \\
+    \midrule
+    Input u     & (Batch, Dim, Len)     & Input sequence \\
+    \rowcolor{TableRowOdd}
+    Delta       & (Batch, Dim, Len)     & Time step (learned, input-dependent) \\
+    Matrix A    & (Dim, N)              & State matrix (log-space, learned) \\
+    \rowcolor{TableRowOdd}
+    Matrix B    & (Batch, N, Len)       & Input projection (input-dependent) \\
+    Matrix C    & (Batch, N, Len)       & Output projection (input-dependent) \\
+    \rowcolor{TableRowOdd}
+    Weight D    & (Dim,)                & Skip connection weight \\
+    State x     & (Batch, Dim, N)       & Hidden state \\
+    \rowcolor{TableRowOdd}
+    Output y    & (Batch, Dim, Len)     & Output sequence \\
+    \midrule
+    Batch       & Batch size            & Typically 2--8 for SFT \\
+    \rowcolor{TableRowOdd}
+    Dim         & Model dimension       & 3,008 (Nemotron 3 Nano) \\
+    N           & State size            & 16 (Mamba default) \\
+    \rowcolor{TableRowOdd}
+    Len         & Sequence length       & 4,096 (SFT pack size) \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ── D.4 ──────────────────────────────────────────────────────
+\section{MoE Routing Technical Reference}
+\label{app:moe-reference}
+
+The routing computation selects the top-6 experts for each token 
+based on router logits. The outputs of the selected experts are 
+weighted by normalized routing probabilities and summed to produce 
+the final MoE layer output.
+
+\noindent For Nemotron 3 Nano: 128 total experts, 6 activated 
+per token, model dimension 3,008, plus 2 shared experts 
+which are always active.
+
+The auxiliary load-balancing loss is added to the main 
+cross-entropy loss during training to ensure uniform expert utilization.
+
+% ── D.5 ──────────────────────────────────────────────────────
+\section{CUDA-to-Ascend API Quick Reference}
+\label{app:api-reference}
+
+\begin{table}[htbp]
+  \centering
+  \caption{CUDA API to torch\_npu / AscendCL equivalent mapping}
+  \label{tab:cuda-npu-api}
+  \begin{tabularx}{\textwidth}{lXl}
+    \toprule
+    \tableheader{CUDA API & Ascend Equivalent & Change Type} \\
+    \midrule
+    \texttt{.cuda()}
+      & \texttt{.npu()} / \texttt{transfer\_to\_npu()} auto-patch
+      & Auto (monkey-patch) \\
+    \rowcolor{TableRowOdd}
+    \texttt{torch.cuda.is\_available()}
+      & \texttt{torch.npu.is\_available()}
+      & Manual if needed \\
+    \texttt{torch.cuda.current\_device()}
+      & \texttt{torch.npu.current\_device()}
+      & Manual if needed \\
+    \rowcolor{TableRowOdd}
+    \texttt{torch.cuda.device\_count()}
+      & \texttt{torch.npu.device\_count()}
+      & Manual if needed \\
+    \texttt{torch.cuda.amp.autocast}
+      & \path{torch.npu.amp.autocast} via \path{_patch_autocast()}
+      & Auto (patch in \path{train_sft_ascend.py}) \\
+    \rowcolor{TableRowOdd}
+    \texttt{torch.cuda.synchronize()}
+      & \texttt{torch.npu.synchronize()}
+      & Manual if needed \\
+    \texttt{backend="nccl"}
+      & \texttt{backend="hccl"} via env var
+      & Config change \\
+    \rowcolor{TableRowOdd}
+    \texttt{NCCL\_DEBUG}
+      & \path{HCCL_BUFFSIZE}, \path{HCCL_IF_BASE_PORT}
+      & Env var rename \\
+    \texttt{nvcc} kernel
+      & TBE operator (\texttt{.py} DSL)
+      & Full rewrite (future work) \\
+    \rowcolor{TableRowOdd}
+    \path{cudaMalloc}/\path{cudaFree}
+      & \path{aclrtMalloc}/\path{aclrtFree} (AscendCL)
+      & Not needed for PyTorch path \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ── D.6 ──────────────────────────────────────────────────────
+\section{Environment Variable Reference}
+\label{app:env-vars}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Ascend environment variables used in the migration}
+  \label{tab:env-vars}
+  \begin{tabularx}{\textwidth}{lXX}
+    \toprule
+    \tableheader{Variable & Description & Recommended Value} \\
+    \midrule
+    \path{ASCEND_VISIBLE_DEVICES}
+      & Comma-separated NPU device IDs visible to the process
+      & \texttt{"0,1,2,3,4,5,6,7"} \\
+    \rowcolor{TableRowOdd}
+    \path{HCCL_BUFFSIZE}
+      & HCCL communication buffer size (MB)
+      & \texttt{512} \\
+    \path{HCCL_IF_BASE_PORT}
+      & Base TCP port for HCCL inter-node sockets
+      & \texttt{22118} \\
+    \rowcolor{TableRowOdd}
+    \path{HCCL_ALGO}
+      & All-reduce algorithm (\texttt{ring} or \texttt{tree})
+      & \texttt{ring} (multi-node) \\
+    \path{ASCEND_GLOBAL_LOG_LEVEL}
+      & CANN log verbosity (0=DEBUG, 1=INFO, 2=WARN, 3=ERROR)
+      & \texttt{3} (production) / \texttt{0} (debug) \\
+    \rowcolor{TableRowOdd}
+    \path{USE_MAMBA_ASCEND_FALLBACK}
+      & Enable PyTorch Mamba fallback (\texttt{1}/\texttt{0})
+      & \texttt{1} \\
+    \path{USE_MOE_ASCEND_FALLBACK}
+      & Enable PyTorch MoE dispatch fallback (\texttt{1}/\texttt{0})
+      & \texttt{1} \\
+    \bottomrule
+    \texttt{USE\_CHUNKED\_MAMBA}
+      & Use chunked Mamba scan (faster) vs.\ sequential
+      & \texttt{1} \\
+    \texttt{TORCH\_DISTRIBUTED\_DEFAULT\_BACKEND}
+      & Default \texttt{init\_process\_group} backend
+      & \texttt{hccl} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ── D.7 ──────────────────────────────────────────────────────
+\section{Inference Server Request/Response Schema}
+\label{app:api-schema}
+
+\begin{lstlisting}[style=Python,
+  caption={Chat completion request schema
+           (\texttt{inference/serve.py})},
+  label={lst:request-schema}]
+# POST /v1/chat/completions
+{
+  "model":       "nemotron-nano3-telecom",   # required
+  "messages": [
+    {"role": "system",    "content": "..."},  # optional
+    {"role": "user",      "content": "..."},  # required
+    {"role": "assistant", "content": "..."},  # optional (multi-turn)
+  ],
+  "max_tokens":  512,     # default: 512
+  "temperature": 0.7,     # default: 0.7
+  "top_p":       0.9,     # default: 0.9
+  "stream":      false,   # streaming not yet implemented
+  "stop":        null     # optional stop sequences
+}
+
+# Response
+{
+  "id":      "chatcmpl-a1b2c3d4",
+  "object":  "chat.completion",
+  "created": 1717000000,
+  "model":   "nemotron-nano3-telecom",
+  "choices": [{
+    "index":         0,
+    "message":       {"role": "assistant", "content": "..."},
+    "finish_reason": "stop"
+  }],
+  "usage": {
+    "prompt_tokens":     142,
+    "completion_tokens": 87,
+    "total_tokens":      229
+  },
+  "_latency_ms": 1240.5    # server-side generation time
+}
+\end{lstlisting}
+
+% ── D.8 ──────────────────────────────────────────────────────
+\section{Benchmark Test Prompts}
+\label{app:benchmark-prompts}
+
+The benchmark in \filepath{inference/benchmark.py} cycles through
+13 multilingual prompts of varying complexity. \tabref{benchmark-prompts}
+documents all prompts and their expected complexity category.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Benchmark test prompts by language and complexity}
+  \label{tab:benchmark-prompts}
+  \begin{tabularx}{\textwidth}{llX}
+    \toprule
+    \tableheader{Lang & Complexity & Prompt} \\
+    \midrule
+    EN & Low   & ``What is the maximum data rate of 5G NR?'' \\
+    \rowcolor{TableRowOdd}
+    EN & Low   & ``How do I reset a Huawei OLT to factory defaults?'' \\
+    EN & Low   & ``Explain the difference between OSPF and BGP.'' \\
+    \rowcolor{TableRowOdd}
+    EN & Low   & ``What does MTU stand for and what is its default value?'' \\
+    EN & Medium & ``Intermittent packet loss on 10G optical link between
+                   two CE6870 switches — diagnostic steps?'' \\
+    \rowcolor{TableRowOdd}
+    EN & Medium & ``Configure VLAN 100 with IP 192.168.100.1/24 on S5735
+                   and enable DHCP.'' \\
+    AR & Low   & \foreignlanguage{arabic}{``ما هو الفرق بين بروتوكول IPv4 و IPv6؟''} \\
+    \rowcolor{TableRowOdd}
+    AR & Low   & \foreignlanguage{arabic}{``كيف يمكنني تكوين OSPF على موجّه هواوي؟''} \\
+    AR & Low   & \foreignlanguage{arabic}{``ما هي متطلبات الطاقة لمحطة قاعدة 5G NR؟''} \\
+    \rowcolor{TableRowOdd}
+    FR & Low   & ``Comment configurer un tunnel GRE sur un routeur Huawei?'' \\
+    FR & Low   & ``Quelle est la différence entre la fibre monomode et multimode?'' \\
+    \rowcolor{TableRowOdd}
+    FR & Low   & ``Expliquez le processus de handover en 5G.'' \\
+    EN & High  & ``50 Huawei AR6120 routers in hub-and-spoke MPLS topology,
+                   more than 90 percent CPU on hub routers during business hours, 
+                   BGP 500 routes, OSPF in access layer — causes and troubleshooting?'' \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
